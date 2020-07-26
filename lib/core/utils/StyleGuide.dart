@@ -12,6 +12,7 @@ final Color customBrown = Color(0xFF99624D);
 final Color customGrey = Color(0xFFF2F2F2);
 final Color customGreen = Color(0xFF136663);
 final Color customGreen2 = Color(0xFF32BEA6);
+final Color beepButtonPink = Color(0xFFE86F6F);
 
 final TextStyle nunitoLarge = TextStyle(fontFamily: 'Nunito', fontSize: 20);
 final TextStyle nunitoMid = TextStyle(fontFamily: 'Nunito', fontSize: 16);

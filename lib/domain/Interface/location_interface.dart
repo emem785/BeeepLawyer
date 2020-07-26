@@ -7,4 +7,6 @@ abstract class UserLocationInterface {
   Future<Location> getLocation();
   Future<String> getAddressFromLocation();
   Future<String> getBuddyAddressFromLocation(Location location);
+  startLawyerOnCallSession();
+  stopLawyerOnCallSession();
 }

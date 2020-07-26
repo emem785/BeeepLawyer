@@ -18,18 +18,18 @@ class _$LocationEventTearOff {
   }
 
 // ignore: unused_element
-  BroadcastLocation broadcastLocation() {
-    return const BroadcastLocation();
+  StartOnCallSession startOnCallSession() {
+    return const StartOnCallSession();
   }
 
 // ignore: unused_element
-  StopBroadcast stopBroadcast() {
-    return const StopBroadcast();
+  StopOnCallSession stopOnCallSession() {
+    return const StopOnCallSession();
   }
 
 // ignore: unused_element
-  ResumeBroadcast resumeBroadcast() {
-    return const ResumeBroadcast();
+  ResumeOnCallSession resumeOnCallSession() {
+    return const ResumeOnCallSession();
   }
 }
 
@@ -40,31 +40,31 @@ mixin _$LocationEvent {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result renderMap(),
-    @required Result broadcastLocation(),
-    @required Result stopBroadcast(),
-    @required Result resumeBroadcast(),
+    @required Result startOnCallSession(),
+    @required Result stopOnCallSession(),
+    @required Result resumeOnCallSession(),
   });
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result renderMap(),
-    Result broadcastLocation(),
-    Result stopBroadcast(),
-    Result resumeBroadcast(),
+    Result startOnCallSession(),
+    Result stopOnCallSession(),
+    Result resumeOnCallSession(),
     @required Result orElse(),
   });
   @optionalTypeArgs
   Result map<Result extends Object>({
     @required Result renderMap(RenderMap value),
-    @required Result broadcastLocation(BroadcastLocation value),
-    @required Result stopBroadcast(StopBroadcast value),
-    @required Result resumeBroadcast(ResumeBroadcast value),
+    @required Result startOnCallSession(StartOnCallSession value),
+    @required Result stopOnCallSession(StopOnCallSession value),
+    @required Result resumeOnCallSession(ResumeOnCallSession value),
   });
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result renderMap(RenderMap value),
-    Result broadcastLocation(BroadcastLocation value),
-    Result stopBroadcast(StopBroadcast value),
-    Result resumeBroadcast(ResumeBroadcast value),
+    Result startOnCallSession(StartOnCallSession value),
+    Result stopOnCallSession(StopOnCallSession value),
+    Result resumeOnCallSession(ResumeOnCallSession value),
     @required Result orElse(),
   });
 }
@@ -124,14 +124,14 @@ class _$RenderMap with DiagnosticableTreeMixin implements RenderMap {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result renderMap(),
-    @required Result broadcastLocation(),
-    @required Result stopBroadcast(),
-    @required Result resumeBroadcast(),
+    @required Result startOnCallSession(),
+    @required Result stopOnCallSession(),
+    @required Result resumeOnCallSession(),
   }) {
     assert(renderMap != null);
-    assert(broadcastLocation != null);
-    assert(stopBroadcast != null);
-    assert(resumeBroadcast != null);
+    assert(startOnCallSession != null);
+    assert(stopOnCallSession != null);
+    assert(resumeOnCallSession != null);
     return renderMap();
   }
 
@@ -139,9 +139,9 @@ class _$RenderMap with DiagnosticableTreeMixin implements RenderMap {
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result renderMap(),
-    Result broadcastLocation(),
-    Result stopBroadcast(),
-    Result resumeBroadcast(),
+    Result startOnCallSession(),
+    Result stopOnCallSession(),
+    Result resumeOnCallSession(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -155,14 +155,14 @@ class _$RenderMap with DiagnosticableTreeMixin implements RenderMap {
   @optionalTypeArgs
   Result map<Result extends Object>({
     @required Result renderMap(RenderMap value),
-    @required Result broadcastLocation(BroadcastLocation value),
-    @required Result stopBroadcast(StopBroadcast value),
-    @required Result resumeBroadcast(ResumeBroadcast value),
+    @required Result startOnCallSession(StartOnCallSession value),
+    @required Result stopOnCallSession(StopOnCallSession value),
+    @required Result resumeOnCallSession(ResumeOnCallSession value),
   }) {
     assert(renderMap != null);
-    assert(broadcastLocation != null);
-    assert(stopBroadcast != null);
-    assert(resumeBroadcast != null);
+    assert(startOnCallSession != null);
+    assert(stopOnCallSession != null);
+    assert(resumeOnCallSession != null);
     return renderMap(this);
   }
 
@@ -170,9 +170,9 @@ class _$RenderMap with DiagnosticableTreeMixin implements RenderMap {
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result renderMap(RenderMap value),
-    Result broadcastLocation(BroadcastLocation value),
-    Result stopBroadcast(StopBroadcast value),
-    Result resumeBroadcast(ResumeBroadcast value),
+    Result startOnCallSession(StartOnCallSession value),
+    Result stopOnCallSession(StopOnCallSession value),
+    Result resumeOnCallSession(ResumeOnCallSession value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -187,43 +187,43 @@ abstract class RenderMap implements LocationEvent {
   const factory RenderMap() = _$RenderMap;
 }
 
-abstract class $BroadcastLocationCopyWith<$Res> {
-  factory $BroadcastLocationCopyWith(
-          BroadcastLocation value, $Res Function(BroadcastLocation) then) =
-      _$BroadcastLocationCopyWithImpl<$Res>;
+abstract class $StartOnCallSessionCopyWith<$Res> {
+  factory $StartOnCallSessionCopyWith(
+          StartOnCallSession value, $Res Function(StartOnCallSession) then) =
+      _$StartOnCallSessionCopyWithImpl<$Res>;
 }
 
-class _$BroadcastLocationCopyWithImpl<$Res>
+class _$StartOnCallSessionCopyWithImpl<$Res>
     extends _$LocationEventCopyWithImpl<$Res>
-    implements $BroadcastLocationCopyWith<$Res> {
-  _$BroadcastLocationCopyWithImpl(
-      BroadcastLocation _value, $Res Function(BroadcastLocation) _then)
-      : super(_value, (v) => _then(v as BroadcastLocation));
+    implements $StartOnCallSessionCopyWith<$Res> {
+  _$StartOnCallSessionCopyWithImpl(
+      StartOnCallSession _value, $Res Function(StartOnCallSession) _then)
+      : super(_value, (v) => _then(v as StartOnCallSession));
 
   @override
-  BroadcastLocation get _value => super._value as BroadcastLocation;
+  StartOnCallSession get _value => super._value as StartOnCallSession;
 }
 
-class _$BroadcastLocation
+class _$StartOnCallSession
     with DiagnosticableTreeMixin
-    implements BroadcastLocation {
-  const _$BroadcastLocation();
+    implements StartOnCallSession {
+  const _$StartOnCallSession();
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'LocationEvent.broadcastLocation()';
+    return 'LocationEvent.startOnCallSession()';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties
-      ..add(DiagnosticsProperty('type', 'LocationEvent.broadcastLocation'));
+      ..add(DiagnosticsProperty('type', 'LocationEvent.startOnCallSession'));
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is BroadcastLocation);
+    return identical(this, other) || (other is StartOnCallSession);
   }
 
   @override
@@ -233,29 +233,29 @@ class _$BroadcastLocation
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result renderMap(),
-    @required Result broadcastLocation(),
-    @required Result stopBroadcast(),
-    @required Result resumeBroadcast(),
+    @required Result startOnCallSession(),
+    @required Result stopOnCallSession(),
+    @required Result resumeOnCallSession(),
   }) {
     assert(renderMap != null);
-    assert(broadcastLocation != null);
-    assert(stopBroadcast != null);
-    assert(resumeBroadcast != null);
-    return broadcastLocation();
+    assert(startOnCallSession != null);
+    assert(stopOnCallSession != null);
+    assert(resumeOnCallSession != null);
+    return startOnCallSession();
   }
 
   @override
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result renderMap(),
-    Result broadcastLocation(),
-    Result stopBroadcast(),
-    Result resumeBroadcast(),
+    Result startOnCallSession(),
+    Result stopOnCallSession(),
+    Result resumeOnCallSession(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
-    if (broadcastLocation != null) {
-      return broadcastLocation();
+    if (startOnCallSession != null) {
+      return startOnCallSession();
     }
     return orElse();
   }
@@ -264,181 +264,75 @@ class _$BroadcastLocation
   @optionalTypeArgs
   Result map<Result extends Object>({
     @required Result renderMap(RenderMap value),
-    @required Result broadcastLocation(BroadcastLocation value),
-    @required Result stopBroadcast(StopBroadcast value),
-    @required Result resumeBroadcast(ResumeBroadcast value),
+    @required Result startOnCallSession(StartOnCallSession value),
+    @required Result stopOnCallSession(StopOnCallSession value),
+    @required Result resumeOnCallSession(ResumeOnCallSession value),
   }) {
     assert(renderMap != null);
-    assert(broadcastLocation != null);
-    assert(stopBroadcast != null);
-    assert(resumeBroadcast != null);
-    return broadcastLocation(this);
+    assert(startOnCallSession != null);
+    assert(stopOnCallSession != null);
+    assert(resumeOnCallSession != null);
+    return startOnCallSession(this);
   }
 
   @override
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result renderMap(RenderMap value),
-    Result broadcastLocation(BroadcastLocation value),
-    Result stopBroadcast(StopBroadcast value),
-    Result resumeBroadcast(ResumeBroadcast value),
+    Result startOnCallSession(StartOnCallSession value),
+    Result stopOnCallSession(StopOnCallSession value),
+    Result resumeOnCallSession(ResumeOnCallSession value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
-    if (broadcastLocation != null) {
-      return broadcastLocation(this);
+    if (startOnCallSession != null) {
+      return startOnCallSession(this);
     }
     return orElse();
   }
 }
 
-abstract class BroadcastLocation implements LocationEvent {
-  const factory BroadcastLocation() = _$BroadcastLocation;
+abstract class StartOnCallSession implements LocationEvent {
+  const factory StartOnCallSession() = _$StartOnCallSession;
 }
 
-abstract class $StopBroadcastCopyWith<$Res> {
-  factory $StopBroadcastCopyWith(
-          StopBroadcast value, $Res Function(StopBroadcast) then) =
-      _$StopBroadcastCopyWithImpl<$Res>;
+abstract class $StopOnCallSessionCopyWith<$Res> {
+  factory $StopOnCallSessionCopyWith(
+          StopOnCallSession value, $Res Function(StopOnCallSession) then) =
+      _$StopOnCallSessionCopyWithImpl<$Res>;
 }
 
-class _$StopBroadcastCopyWithImpl<$Res>
+class _$StopOnCallSessionCopyWithImpl<$Res>
     extends _$LocationEventCopyWithImpl<$Res>
-    implements $StopBroadcastCopyWith<$Res> {
-  _$StopBroadcastCopyWithImpl(
-      StopBroadcast _value, $Res Function(StopBroadcast) _then)
-      : super(_value, (v) => _then(v as StopBroadcast));
+    implements $StopOnCallSessionCopyWith<$Res> {
+  _$StopOnCallSessionCopyWithImpl(
+      StopOnCallSession _value, $Res Function(StopOnCallSession) _then)
+      : super(_value, (v) => _then(v as StopOnCallSession));
 
   @override
-  StopBroadcast get _value => super._value as StopBroadcast;
+  StopOnCallSession get _value => super._value as StopOnCallSession;
 }
 
-class _$StopBroadcast with DiagnosticableTreeMixin implements StopBroadcast {
-  const _$StopBroadcast();
-
-  @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'LocationEvent.stopBroadcast()';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties..add(DiagnosticsProperty('type', 'LocationEvent.stopBroadcast'));
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is StopBroadcast);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result renderMap(),
-    @required Result broadcastLocation(),
-    @required Result stopBroadcast(),
-    @required Result resumeBroadcast(),
-  }) {
-    assert(renderMap != null);
-    assert(broadcastLocation != null);
-    assert(stopBroadcast != null);
-    assert(resumeBroadcast != null);
-    return stopBroadcast();
-  }
-
-  @override
-  @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result renderMap(),
-    Result broadcastLocation(),
-    Result stopBroadcast(),
-    Result resumeBroadcast(),
-    @required Result orElse(),
-  }) {
-    assert(orElse != null);
-    if (stopBroadcast != null) {
-      return stopBroadcast();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result renderMap(RenderMap value),
-    @required Result broadcastLocation(BroadcastLocation value),
-    @required Result stopBroadcast(StopBroadcast value),
-    @required Result resumeBroadcast(ResumeBroadcast value),
-  }) {
-    assert(renderMap != null);
-    assert(broadcastLocation != null);
-    assert(stopBroadcast != null);
-    assert(resumeBroadcast != null);
-    return stopBroadcast(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result renderMap(RenderMap value),
-    Result broadcastLocation(BroadcastLocation value),
-    Result stopBroadcast(StopBroadcast value),
-    Result resumeBroadcast(ResumeBroadcast value),
-    @required Result orElse(),
-  }) {
-    assert(orElse != null);
-    if (stopBroadcast != null) {
-      return stopBroadcast(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class StopBroadcast implements LocationEvent {
-  const factory StopBroadcast() = _$StopBroadcast;
-}
-
-abstract class $ResumeBroadcastCopyWith<$Res> {
-  factory $ResumeBroadcastCopyWith(
-          ResumeBroadcast value, $Res Function(ResumeBroadcast) then) =
-      _$ResumeBroadcastCopyWithImpl<$Res>;
-}
-
-class _$ResumeBroadcastCopyWithImpl<$Res>
-    extends _$LocationEventCopyWithImpl<$Res>
-    implements $ResumeBroadcastCopyWith<$Res> {
-  _$ResumeBroadcastCopyWithImpl(
-      ResumeBroadcast _value, $Res Function(ResumeBroadcast) _then)
-      : super(_value, (v) => _then(v as ResumeBroadcast));
-
-  @override
-  ResumeBroadcast get _value => super._value as ResumeBroadcast;
-}
-
-class _$ResumeBroadcast
+class _$StopOnCallSession
     with DiagnosticableTreeMixin
-    implements ResumeBroadcast {
-  const _$ResumeBroadcast();
+    implements StopOnCallSession {
+  const _$StopOnCallSession();
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'LocationEvent.resumeBroadcast()';
+    return 'LocationEvent.stopOnCallSession()';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties
-      ..add(DiagnosticsProperty('type', 'LocationEvent.resumeBroadcast'));
+      ..add(DiagnosticsProperty('type', 'LocationEvent.stopOnCallSession'));
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is ResumeBroadcast);
+    return identical(this, other) || (other is StopOnCallSession);
   }
 
   @override
@@ -448,29 +342,29 @@ class _$ResumeBroadcast
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result renderMap(),
-    @required Result broadcastLocation(),
-    @required Result stopBroadcast(),
-    @required Result resumeBroadcast(),
+    @required Result startOnCallSession(),
+    @required Result stopOnCallSession(),
+    @required Result resumeOnCallSession(),
   }) {
     assert(renderMap != null);
-    assert(broadcastLocation != null);
-    assert(stopBroadcast != null);
-    assert(resumeBroadcast != null);
-    return resumeBroadcast();
+    assert(startOnCallSession != null);
+    assert(stopOnCallSession != null);
+    assert(resumeOnCallSession != null);
+    return stopOnCallSession();
   }
 
   @override
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result renderMap(),
-    Result broadcastLocation(),
-    Result stopBroadcast(),
-    Result resumeBroadcast(),
+    Result startOnCallSession(),
+    Result stopOnCallSession(),
+    Result resumeOnCallSession(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
-    if (resumeBroadcast != null) {
-      return resumeBroadcast();
+    if (stopOnCallSession != null) {
+      return stopOnCallSession();
     }
     return orElse();
   }
@@ -479,36 +373,145 @@ class _$ResumeBroadcast
   @optionalTypeArgs
   Result map<Result extends Object>({
     @required Result renderMap(RenderMap value),
-    @required Result broadcastLocation(BroadcastLocation value),
-    @required Result stopBroadcast(StopBroadcast value),
-    @required Result resumeBroadcast(ResumeBroadcast value),
+    @required Result startOnCallSession(StartOnCallSession value),
+    @required Result stopOnCallSession(StopOnCallSession value),
+    @required Result resumeOnCallSession(ResumeOnCallSession value),
   }) {
     assert(renderMap != null);
-    assert(broadcastLocation != null);
-    assert(stopBroadcast != null);
-    assert(resumeBroadcast != null);
-    return resumeBroadcast(this);
+    assert(startOnCallSession != null);
+    assert(stopOnCallSession != null);
+    assert(resumeOnCallSession != null);
+    return stopOnCallSession(this);
   }
 
   @override
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result renderMap(RenderMap value),
-    Result broadcastLocation(BroadcastLocation value),
-    Result stopBroadcast(StopBroadcast value),
-    Result resumeBroadcast(ResumeBroadcast value),
+    Result startOnCallSession(StartOnCallSession value),
+    Result stopOnCallSession(StopOnCallSession value),
+    Result resumeOnCallSession(ResumeOnCallSession value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
-    if (resumeBroadcast != null) {
-      return resumeBroadcast(this);
+    if (stopOnCallSession != null) {
+      return stopOnCallSession(this);
     }
     return orElse();
   }
 }
 
-abstract class ResumeBroadcast implements LocationEvent {
-  const factory ResumeBroadcast() = _$ResumeBroadcast;
+abstract class StopOnCallSession implements LocationEvent {
+  const factory StopOnCallSession() = _$StopOnCallSession;
+}
+
+abstract class $ResumeOnCallSessionCopyWith<$Res> {
+  factory $ResumeOnCallSessionCopyWith(
+          ResumeOnCallSession value, $Res Function(ResumeOnCallSession) then) =
+      _$ResumeOnCallSessionCopyWithImpl<$Res>;
+}
+
+class _$ResumeOnCallSessionCopyWithImpl<$Res>
+    extends _$LocationEventCopyWithImpl<$Res>
+    implements $ResumeOnCallSessionCopyWith<$Res> {
+  _$ResumeOnCallSessionCopyWithImpl(
+      ResumeOnCallSession _value, $Res Function(ResumeOnCallSession) _then)
+      : super(_value, (v) => _then(v as ResumeOnCallSession));
+
+  @override
+  ResumeOnCallSession get _value => super._value as ResumeOnCallSession;
+}
+
+class _$ResumeOnCallSession
+    with DiagnosticableTreeMixin
+    implements ResumeOnCallSession {
+  const _$ResumeOnCallSession();
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'LocationEvent.resumeOnCallSession()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'LocationEvent.resumeOnCallSession'));
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is ResumeOnCallSession);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result renderMap(),
+    @required Result startOnCallSession(),
+    @required Result stopOnCallSession(),
+    @required Result resumeOnCallSession(),
+  }) {
+    assert(renderMap != null);
+    assert(startOnCallSession != null);
+    assert(stopOnCallSession != null);
+    assert(resumeOnCallSession != null);
+    return resumeOnCallSession();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result renderMap(),
+    Result startOnCallSession(),
+    Result stopOnCallSession(),
+    Result resumeOnCallSession(),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (resumeOnCallSession != null) {
+      return resumeOnCallSession();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result renderMap(RenderMap value),
+    @required Result startOnCallSession(StartOnCallSession value),
+    @required Result stopOnCallSession(StopOnCallSession value),
+    @required Result resumeOnCallSession(ResumeOnCallSession value),
+  }) {
+    assert(renderMap != null);
+    assert(startOnCallSession != null);
+    assert(stopOnCallSession != null);
+    assert(resumeOnCallSession != null);
+    return resumeOnCallSession(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result renderMap(RenderMap value),
+    Result startOnCallSession(StartOnCallSession value),
+    Result stopOnCallSession(StopOnCallSession value),
+    Result resumeOnCallSession(ResumeOnCallSession value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (resumeOnCallSession != null) {
+      return resumeOnCallSession(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ResumeOnCallSession implements LocationEvent {
+  const factory ResumeOnCallSession() = _$ResumeOnCallSession;
 }
 
 class _$LocationStateTearOff {

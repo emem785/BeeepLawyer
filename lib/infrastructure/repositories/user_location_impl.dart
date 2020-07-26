@@ -1,8 +1,10 @@
 import 'dart:async';
+import 'dart:io';
 
 import 'package:beep_lawyer2/domain/Interface/location_interface.dart';
 import 'package:beep_lawyer2/infrastructure/models/location.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:injectable/injectable.dart';
 
@@ -44,5 +46,26 @@ class UserLocationImpl implements UserLocationInterface {
     final address =
         "${placemark[0].name},${placemark[0].locality},${placemark[0].administrativeArea}";
     return address;
+  }
+
+  @override
+  startLawyerOnCallSession() async {
+    if (Platform.isAndroid) {
+      MethodChannel methodChannel = MethodChannel("Flutter2Android");
+      var data = await methodChannel.invokeMethod(
+        "startService",
+        // {"title": title, "content": content},
+      );
+      print(data);
+    }
+  }
+
+  @override
+  stopLawyerOnCallSession() async {
+    if (Platform.isAndroid) {
+      MethodChannel methodChannel = MethodChannel("Flutter2Android");
+      var data = await methodChannel.invokeMethod("stopService");
+      print(data);
+    }
   }
 }

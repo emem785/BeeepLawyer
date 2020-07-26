@@ -4,7 +4,7 @@ part of 'location_bloc.dart';
 @freezed
 abstract class LocationEvent with _$LocationEvent {
   const factory LocationEvent.renderMap() = RenderMap;
-  const factory LocationEvent.broadcastLocation() = BroadcastLocation;
-  const factory LocationEvent.stopBroadcast() = StopBroadcast;
-  const factory LocationEvent.resumeBroadcast() = ResumeBroadcast;
+  const factory LocationEvent.startOnCallSession() = StartOnCallSession;
+  const factory LocationEvent.stopOnCallSession() = StopOnCallSession;
+  const factory LocationEvent.resumeOnCallSession() = ResumeOnCallSession;
 }

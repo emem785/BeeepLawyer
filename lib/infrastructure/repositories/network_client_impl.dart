@@ -11,6 +11,8 @@ import 'package:http/http.dart' as http;
 import 'package:injectable/injectable.dart';
 import '../../core/error/failure.dart';
 
+
+//TODO: Remember to change the retrofit end point
 const URL = 'http://beeep.pythonanywhere.com/auth/';
 const URL_SHORT = 'http://beeep.pythonanywhere.com/';
 

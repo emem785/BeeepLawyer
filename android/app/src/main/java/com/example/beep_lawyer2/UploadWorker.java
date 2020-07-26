@@ -3,6 +3,7 @@ package com.example.beep_lawyer2;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.location.Location;
 import android.os.Build;
 import android.util.Log;
@@ -21,9 +22,19 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+import static android.content.Context.MODE_PRIVATE;
+import static com.example.beep_lawyer2.MainActivity.PHONE;
+import static com.example.beep_lawyer2.MainActivity.SHARED_PREFS;
+import static com.example.beep_lawyer2.MainActivity.TOKEN;
+
 public class UploadWorker extends Worker {
     public static final String TAG = "UploadWorker";
     private FusedLocationProviderClient fusedLocationClient;
+
+    private static final String TAG2 = "shared";
+
+    public  String phone;
+    public  String token;
 
     public UploadWorker(@NonNull Context context, @NonNull WorkerParameters workerParams) {
         super(context, workerParams);
@@ -47,9 +58,9 @@ public class UploadWorker extends Worker {
 
         }
         NotificationCompat.Builder builder = new NotificationCompat.Builder(getApplicationContext(), "messages")
-                .setContentText("doing some work")
-                .setContentTitle("Worker Manager");
-//                .setSmallIcon(R.drawable.ic_android_black_24dp);
+                .setContentText("Open App to stop")
+                .setContentTitle("Your Presently On Call")
+                .setSmallIcon(R.drawable.ic_logo);
 
         manager.notify(1, builder.build());
 
@@ -59,6 +70,8 @@ public class UploadWorker extends Worker {
 
 
     private void postLocationToApi() {
+
+        loadData();
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(getApplicationContext());
         fusedLocationClient.getLastLocation().addOnCompleteListener(new OnCompleteListener<Location>() {
             @Override
@@ -69,7 +82,7 @@ public class UploadWorker extends Worker {
                     Position position = new Position(String.valueOf(location.getLongitude()),String.valueOf(location.getLatitude()));
                     Log.d(TAG, "onComplete: " + location.getLongitude());
                     JsonPlaceHolderApi jsonPlaceHolderApi = RetrofitClientInstance.getRetrofitInstance().create(JsonPlaceHolderApi.class);
-                    Call<Position> call = jsonPlaceHolderApi.sendPosition(position);
+                    Call<Position> call = jsonPlaceHolderApi.sendPosition(token,phone,position);
 
                     call.enqueue(new Callback<Position>() {
                         @Override
@@ -91,4 +104,15 @@ public class UploadWorker extends Worker {
         });
 
     }
+
+    public void loadData(){
+        SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences(SHARED_PREFS,MODE_PRIVATE);
+        token = sharedPreferences.getString(TOKEN,"");
+        phone = sharedPreferences.getString(PHONE,"");
+
+        Log.d(TAG2,token);
+    }
+
+
+
 }
