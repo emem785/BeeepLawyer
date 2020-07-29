@@ -110,7 +110,6 @@ public class UploadWorker extends Worker {
         token = sharedPreferences.getString(TOKEN,"");
         phone = sharedPreferences.getString(PHONE,"");
 
-        Log.d(TAG2,token);
     }
 
 

@@ -8,6 +8,7 @@ import 'package:geolocator/geolocator.dart';
 import 'package:get_it/get_it.dart';
 import 'package:injectable/get_it_helper.dart';
 
+import 'application/blocs/address_bloc/address_bloc.dart';
 import 'application/blocs/auth_bloc/auth_bloc.dart';
 import 'application/blocs/location_bloc/location_bloc.dart';
 import 'application/blocs/map_bloc/map_bloc.dart';
@@ -38,8 +39,11 @@ void $initGetIt(GetIt g, {String environment}) {
   gh.factory<NavigationBloc>(() => NavigationBloc());
   gh.lazySingleton<NetworkInterface>(() =>
       NetworkClientImpl(localStorageInterface: g<LocalStorageInterface>()));
-  gh.factory<UserLocationInterface>(
-      () => UserLocationImpl(geolocator: g<Geolocator>()));
+  gh.factory<UserLocationInterface>(() => UserLocationImpl(
+      localStorageInterface: g<LocalStorageInterface>(),
+      geolocator: g<Geolocator>()));
+  gh.factory<AddressBloc>(
+      () => AddressBloc(userLocation: g<UserLocationInterface>()));
   gh.lazySingleton<ApiInterface>(() => HttpApiImpl(
       localStorageRepo: g<LocalStorageInterface>(),
       client: g<NetworkInterface>()));
@@ -58,8 +62,10 @@ void $initGetIt(GetIt g, {String environment}) {
       localStorageInterface: g<LocalStorageInterface>(),
       apiInterface: g<ApiInterface>()));
   gh.factory<LocationBloc>(() => LocationBloc(
-      mapInterface: g<MapInterface>(),
-      userLocation: g<UserLocationInterface>()));
+        localStorageInterface: g<LocalStorageInterface>(),
+        mapInterface: g<MapInterface>(),
+        userLocation: g<UserLocationInterface>(),
+      ));
   gh.factory<MapBloc>(() => MapBloc(
         userLocationInterface: g<UserLocationInterface>(),
         mapInterface: g<MapInterface>(),

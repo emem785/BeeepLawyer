@@ -11,7 +11,11 @@ abstract class LocalStorageInterface{
   Future cacheToken(String data);
   Future<Either<Failure,String>> getToken();
   Future removeToken();
+  Future cacheOncall(bool onCall);
+  Future<Either<Failure,bool>> getOnCall();
+  Future removeOnCall();
   Future<User> cacheUserFromSignIn(Map<String,dynamic> map,String phoneNumber);
   Future<User> cacheUserFromRegister(Map<String,dynamic> map,String phoneNumber);
   cacheScnNumber(String scnNumber);
+  Future<String> getPhoneNumber();
 }

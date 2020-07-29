@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:beep_lawyer2/application/blocs/address_bloc/address_bloc.dart';
 import 'package:beep_lawyer2/application/blocs/location_bloc/location_bloc.dart';
 import 'package:beep_lawyer2/core/widgets/map_widgets/top_bar.dart';
 import 'package:beep_lawyer2/core/widgets/menu_widgets/more_menu.dart';
@@ -73,12 +74,12 @@ class _HomeMapState extends State<HomeMap> {
               ),
             ),
           ),
-          BlocBuilder<LocationBloc, LocationState>(builder: (context, state) {
+          BlocBuilder<AddressBloc, AddressState>(builder: (context, state) {
             return state.map(
-                broadcastStarted: (b) => TopBar(address: b.mapTool.address),
-                mapRendered: (r) => TopBar(address: r.mapTool.address),
-                broadcastStopped: (n) => TopBar(address: n.mapTool.address),
-                initial: (i) => SizedBox());
+                addressInitial: (i) => TopBar(address: ""),
+                addressLoading: (l) => TopBar(address: "Getting Address ...."),
+                addressFailure: (f) => TopBar(address: "Failed to get address"),
+                addressGotten: (g) => TopBar(address: g.address));
           }),
         ],
       ),

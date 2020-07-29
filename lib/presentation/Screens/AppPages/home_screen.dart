@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:beep_lawyer2/application/blocs/address_bloc/address_bloc.dart';
 import 'package:beep_lawyer2/application/blocs/map_bloc/map_bloc.dart';
 import 'package:beep_lawyer2/core/widgets/bottom_nav_bar_widgets/Bottom_Nav_bar.dart';
 import 'package:beep_lawyer2/core/widgets/map_widgets/map_home_widgets/map_home.dart';
@@ -51,14 +52,12 @@ class _HomeScreenState extends State<HomeScreen> {
 
   final GlobalKey<ScaffoldState> _globalKey = GlobalKey<ScaffoldState>();
   int navIndex = 0;
-  double _height = 0;
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        BlocProvider(
-          create: (_) => getIt<LocationBloc>()..add(RenderMap()),
-        ),
+        BlocProvider(create: (_) => getIt<LocationBloc>()..add(RenderMap())),
+        BlocProvider(create: (_) => getIt<AddressBloc>()..add(GetAddress()))
       ],
       child: Scaffold(
         key: _globalKey,

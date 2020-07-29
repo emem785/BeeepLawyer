@@ -3,6 +3,7 @@ package com.example.beep_lawyer2;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -16,7 +17,6 @@ import androidx.work.WorkManager;
 import java.lang.reflect.Array;
 import java.util.concurrent.TimeUnit;
 
-import io.flutter.Log;
 import io.flutter.embedding.android.FlutterActivity;
 import io.flutter.embedding.engine.FlutterEngine;
 import io.flutter.plugin.common.MethodChannel;
@@ -25,15 +25,17 @@ public class MainActivity extends FlutterActivity {
     private Intent forService;
     public static final String CHANNEL = "Flutter2Android";
     public static final String CHANNEL2 = "rest";
-    private String title;
-    private String content;
+    private String token;
+    private String phone;
     public static final String TAG_UPLOAD_WORKER = "UploadWorker";
     public static final String NAME_UPLOAD_WORKER = "CurrentUploadWorker";
     PeriodicWorkRequest periodicUploadWork;
 
     public static final String SHARED_PREFS = "Shared_prefs";
-    public static final String TOKEN = "token";
-    public static final String PHONE = "phone";
+    public static final String TOKEN = "user_token";
+    public static final String PHONE = "phone_number";
+
+
 
 
 
@@ -48,10 +50,10 @@ public class MainActivity extends FlutterActivity {
         new MethodChannel(flutterEngine.getDartExecutor().getBinaryMessenger(),CHANNEL)
                 .setMethodCallHandler(
                         ((call, result) -> {
-                            title = call.argument("title");
-                            content = call.argument("content");
+                            phone = call.argument("phone");
+                            token = call.argument("token");
                             if(call.method.equals("startService")){
-                                startService();
+                                startService(token,phone);
                                 result.success("Service began");
                             }
                             if(call.method.equals("stopService")){
@@ -65,10 +67,9 @@ public class MainActivity extends FlutterActivity {
 
     }
 
-    private void startService(){
+    private void startService(String token, String phone){
 
-        saveData("ee_-G2vX_lU5piwOWdZ4UUjSG0gWe_MQvUj5vomiMDQ5vhunqzDpsA","08011111111");
-
+        saveData(token,phone);
 
         Constraints constraints = new Constraints.Builder()
                 .setRequiredNetworkType(NetworkType.CONNECTED)
@@ -92,6 +93,7 @@ public class MainActivity extends FlutterActivity {
     }
 
     private void stopService(){
+        deleteData();
         WorkManager.getInstance(this).cancelAllWorkByTag(TAG_UPLOAD_WORKER);
     }
 
@@ -102,9 +104,21 @@ public class MainActivity extends FlutterActivity {
         editor.putString(TOKEN,token);
         editor.putString(PHONE,phone);
 
-
-
+        editor.commit();
     }
+
+    private void deleteData(){
+        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS,MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+
+        editor.remove(TOKEN);
+        editor.remove(PHONE);
+        editor.commit();
+    }
+
+
+
+
 
 
 }

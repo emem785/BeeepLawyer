@@ -13,7 +13,7 @@ class Map extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return   StreamBuilder<Marker>(
+    return StreamBuilder<Marker>(
         stream: markerStream,
         initialData: mapTool.marker,
         builder: (context, snapshot) {
@@ -26,12 +26,12 @@ class Map extends StatelessWidget {
             mapController: mapTool.mapController,
             layers: [
               TileLayerOptions(
-                urlTemplate: "https://api.tiles.mapbox.com/v4/"
-                    "{id}/{z}/{x}/{y}@2x.png?access_token={accessToken}",
+                urlTemplate:
+                    "https://api.mapbox.com/styles/v1/{id}/{z}/{x}/{y}@2x?access_token={accessToken}",
                 additionalOptions: {
                   'accessToken':
                       'pk.eyJ1IjoiZW1lbTc4NSIsImEiOiJjazVmOTViZ2EyZjZpM2xxaGFjNmVqMmxpIn0.IrkZKaDokjBJ3mnKnNzfoQ',
-                  'id': 'mapbox.mapbox-streets-v8',
+                  'id': 'emem785/ckc7ed5ov0kjf1irq933898oa/tiles/256',
                 },
               ),
               MarkerLayerOptions(

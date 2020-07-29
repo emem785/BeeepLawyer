@@ -50,17 +50,4 @@ class MapHelperImpl implements MapInterface {
     );
   }
 
-  @override
-  Future<MapTool> getMapToolWithAddress(MapTool mapTool) async {
-    final address = await userLocationInterface.getAddressFromLocation();
-    mapTool.setAddress(address);
-    return mapTool;
-  }
-  @override
-  Future<MapTool> getMapToolWithAddressFromApi(MapTool mapTool,String phoneNumber)async {
-    final location = await apiInterface.getLocation(phoneNumber).first;
-    final address = await userLocationInterface.getBuddyAddressFromLocation(location);
-    mapTool.setAddress(address);
-    return mapTool;
-  }
 }
