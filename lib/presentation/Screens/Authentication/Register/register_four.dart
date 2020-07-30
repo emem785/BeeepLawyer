@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:beep_lawyer2/application/blocs/user_bloc/user_bloc.dart';
+import 'package:beep_lawyer2/core/utils/StyleGuide.dart';
 import 'package:beep_lawyer2/core/widgets/common_widgets/common_button.dart';
 import 'package:beep_lawyer2/core/widgets/common_widgets/spinner.dart';
 import 'package:flutter/material.dart';
@@ -31,13 +32,13 @@ class _RegisterFourState extends State<RegisterFour> {
           leading: IconButton(
               icon: Icon(
                 Icons.arrow_back,
-                color: Colors.brown,
+                color: primaryColor,
               ),
               onPressed: () => Navigator.pop(context)),
           titleSpacing: 0.1,
           title: Text(
             'Back',
-            style: TextStyle(color: Colors.brown),
+            style: TextStyle(color: primaryColor),
           ),
           elevation: 0.0,
           backgroundColor: Colors.transparent,
@@ -101,6 +102,7 @@ class _RegisterFourState extends State<RegisterFour> {
                                 if (_formKey.currentState.validate()) {
                                   userBloc.add(CacheScnNumber(_scnNumber.text));
                                 }
+                                // Navigator.pushNamed(context, '/RegisterFive');
                               },
                               text: "Verify Number",
                             ),

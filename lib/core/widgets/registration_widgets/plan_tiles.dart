@@ -1,3 +1,4 @@
+import 'package:beep_lawyer2/core/utils/StyleGuide.dart';
 import 'package:beep_lawyer2/core/utils/enums.dart';
 import 'package:beep_lawyer2/core/widgets/registration_widgets/plan_description.dart';
 import 'package:flutter/material.dart';
@@ -28,7 +29,7 @@ class _PlanTilesState extends State<PlanTiles> {
                 color: Colors.white,
                 border: Border.all(
                     color: currentPlan == plan.basicPlan
-                        ? Color.fromRGBO(153, 98, 77, 1)
+                        ? primaryColor
                         : Colors.transparent,
                     width: 2)),
             width: 312,
@@ -43,7 +44,7 @@ class _PlanTilesState extends State<PlanTiles> {
                   ),
                   value: plan.basicPlan,
                   groupValue: currentPlan,
-                  activeColor: Colors.brown,
+                  activeColor: primaryColor,
                   controlAffinity: ListTileControlAffinity.trailing,
                   onChanged: (plan value) {
                     setState(() {
@@ -70,7 +71,7 @@ class _PlanTilesState extends State<PlanTiles> {
                   color: Colors.white,
                   border: Border.all(
                       color: currentPlan == plan.essentialPlan
-                          ? Color.fromRGBO(153, 98, 77, 1)
+                          ? primaryColor
                           : Colors.transparent,
                       width: 2)),
               width: 312,
@@ -85,7 +86,7 @@ class _PlanTilesState extends State<PlanTiles> {
                     ),
                     value: plan.essentialPlan,
                     groupValue: currentPlan,
-                    activeColor: Colors.brown,
+                    activeColor: primaryColor,
                     controlAffinity: ListTileControlAffinity.trailing,
                     onChanged: (plan value) {
                       setState(() {

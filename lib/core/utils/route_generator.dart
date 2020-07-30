@@ -68,7 +68,7 @@ class RouteGenerator {
           break;
 
         case '/SetupBeep':
-          screen = SetupBeep();
+          screen = SetupBeepPage();
           break;
 
         case '/SetupBeepTwo':

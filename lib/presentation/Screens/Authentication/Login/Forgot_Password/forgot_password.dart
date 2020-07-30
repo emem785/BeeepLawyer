@@ -1,3 +1,4 @@
+import 'package:beep_lawyer2/core/utils/StyleGuide.dart';
 import 'package:beep_lawyer2/core/widgets/common_widgets/common_button.dart';
 import 'package:beep_lawyer2/core/widgets/common_widgets/custom_text_form_field.dart';
 import 'package:flutter/material.dart';
@@ -32,13 +33,13 @@ class _ForgotPasswordState extends State<ForgotPassword> {
         leading: IconButton(
             icon: Icon(
               Icons.arrow_back,
-              color: Colors.brown,
+              color: primaryColor,
             ),
             onPressed: () => Navigator.pop(context)),
         titleSpacing: 0.1,
         title: Text(
           'Back',
-          style: TextStyle(color: Colors.brown),
+          style: TextStyle(color: primaryColor),
         ),
         elevation: 0.0,
         backgroundColor: Colors.transparent,

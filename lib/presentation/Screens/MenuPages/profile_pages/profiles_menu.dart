@@ -50,13 +50,13 @@ class _ProfileMenuState extends State<ProfileMenu> {
         leading: IconButton(
             icon: Icon(
               Icons.arrow_back,
-              color: Colors.black,
+              color: primaryColor,
             ),
             onPressed: () => Navigator.pop(context)),
         titleSpacing: 0.1,
         title: Text(
           'Profile',
-          style: TextStyle(color: Colors.black),
+          style: TextStyle(color: primaryColor),
         ),
         elevation: 0.0,
         backgroundColor: Colors.transparent,

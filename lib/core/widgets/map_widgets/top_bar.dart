@@ -1,3 +1,4 @@
+import 'package:beep_lawyer2/core/utils/StyleGuide.dart';
 import 'package:flutter/material.dart';
 
 class TopBar extends StatelessWidget {
@@ -51,7 +52,7 @@ class TopBar extends StatelessWidget {
                   child: Center(
                     child: Icon(
                       Icons.my_location,
-                      color: Colors.brown,
+                      color: primaryColor,
                     ),
                   ),
                   decoration: BoxDecoration(

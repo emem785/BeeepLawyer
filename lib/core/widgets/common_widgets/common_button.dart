@@ -21,12 +21,12 @@ class CommonButton extends StatelessWidget {
             onPressed: onPressed,
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(5),
-                side: BorderSide(color: isGreen ? lightGreen : Colors.brown)),
+                side: BorderSide(color: isGreen ? primaryColor : Colors.brown)),
             color: isGreen ? Colors.transparent: Colors.brown,
             elevation: 0.0,
             child: Text(
               text,
-              style: TextStyle(color: isGreen ? lightGreen: Colors.white, fontWeight: FontWeight.w600),
+              style: TextStyle(color: isGreen ? primaryColor : Colors.white, fontWeight: FontWeight.w600),
             ),
           ),
         ),
