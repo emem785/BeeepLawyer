@@ -13,7 +13,8 @@ class SetupBeepPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-        child: SetupBeep(), create: (_) => getIt<PaymentBloc>());
+        child: SetupBeep(),
+        create: (_) => getIt<PaymentBloc>()..add(InitializePayment()));
   }
 }
 
@@ -28,7 +29,7 @@ class _SetupBeepState extends State<SetupBeep> {
 
   @override
   Widget build(BuildContext context) {
-    final userBloc = BlocProvider.of<UserBloc>(context);
+    // final userBloc = BlocProvider.of<UserBloc>(context);
     final paymentBloc = BlocProvider.of<PaymentBloc>(context);
     return Scaffold(
       key: globalKey,
@@ -63,7 +64,7 @@ class _SetupBeepState extends State<SetupBeep> {
                     padding: const EdgeInsets.symmetric(vertical: 24.0),
                     child: Text('This is to help cover operational costs.'),
                   ),
-                  PlanTiles(),
+                  PlanTiles(paymentBloc: paymentBloc),
                   BlocListener<PaymentBloc, PaymentState>(
                       child: Padding(
                         padding: const EdgeInsets.only(bottom: 8.0),
@@ -71,7 +72,8 @@ class _SetupBeepState extends State<SetupBeep> {
                           text: 'Continue',
                           onPressed: () {
                             // Navigator.pushNamed(context, '/SetupBeepThree');
-                            paymentBloc.add(MakePayment(150000, context));
+                            //TODO : Not working
+                            paymentBloc.add(MakePayment(context));
                           },
                         ),
                       ),
@@ -84,7 +86,7 @@ class _SetupBeepState extends State<SetupBeep> {
                                 )),
                             paymentSucceeded: (s) => Navigator.pushNamed(
                                 context, '/SetupBeepThree'));
-                      }),
+                      })
                 ],
               ),
             ),

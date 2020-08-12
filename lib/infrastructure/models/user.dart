@@ -9,8 +9,8 @@ class User {
   String email;
   String phone;
   String scnNumber;
-  Null longitude;
-  Null latitude;
+  double longitude;
+  double latitude;
   bool isVerified;
   Null token;
   String image;

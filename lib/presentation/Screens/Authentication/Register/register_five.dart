@@ -2,6 +2,7 @@ import 'package:beep_lawyer2/core/utils/StyleGuide.dart';
 import 'package:beep_lawyer2/core/widgets/common_widgets/common_button.dart';
 import 'package:beep_lawyer2/core/widgets/common_widgets/succes_widget.dart';
 import 'package:beep_lawyer2/presentation/Screens/AppPages/home_screen.dart';
+import 'package:beep_lawyer2/presentation/Screens/Authentication/Register/pay_stack_pages/paystack_payment_page.dart';
 
 import 'package:flutter/material.dart';
 
@@ -37,7 +38,10 @@ class RegisterFive extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(bottom: 8.0),
                 child: CommonButton(
-                    onPressed: () => Navigator.pushNamed(context, '/SetupBeep'),
+                    onPressed: () {
+                      return Navigator.pushNamed(context, '/SetupBeep');
+                      // return Navigator.push(context, MaterialPageRoute(builder: (_)=> PayStackPaymentPage()));
+                    },
                     text: 'Setup Beeep'),
               )
             ],

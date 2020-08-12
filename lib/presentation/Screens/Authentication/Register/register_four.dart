@@ -99,10 +99,11 @@ class _RegisterFourState extends State<RegisterFour> {
                             },
                             child: CommonButton(
                               onPressed: () {
-                                if (_formKey.currentState.validate()) {
-                                  userBloc.add(CacheScnNumber(_scnNumber.text));
-                                }
-                                // Navigator.pushNamed(context, '/RegisterFive');
+                                // if (_formKey.currentState.validate()) {
+                                //   userBloc.add(CacheScnNumber(_scnNumber.text));
+                                // }
+                                //TODO
+                                Navigator.pushNamed(context, '/RegisterFive');
                               },
                               text: "Verify Number",
                             ),

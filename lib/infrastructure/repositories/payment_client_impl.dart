@@ -4,7 +4,6 @@ import 'package:beep_lawyer2/core/error/failure.dart';
 import 'package:beep_lawyer2/domain/Interface/payment_interface.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_paystack/flutter_paystack.dart';
-import 'package:flutter_paystack/src/models/charge.dart';
 import 'package:dartz/dartz.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:injectable/injectable.dart';
@@ -55,7 +54,7 @@ class PaymentClientImpl implements PaymentInterface {
       platform = 'Android';
     }
 
-    return 'ChargedFrom${platform}_${DateTime.now().millisecondsSinceEpoch}';
+    return 'BEEP_Lawyer_ChargedFrom${platform}_${DateTime.now().millisecondsSinceEpoch}';
   }
 
   @override

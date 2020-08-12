@@ -4,6 +4,7 @@ import 'package:beep_lawyer2/core/widgets/common_widgets/common_button.dart';
 import 'package:beep_lawyer2/injectable.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_paystack/flutter_paystack.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class PayStackPaymentPage extends StatelessWidget {
@@ -52,23 +53,46 @@ class _PayStackPaymentState extends State<PayStackPayment> {
                   ),
                 ),
               ),
+              CommonButton(
+                  onPressed: () {
+                    PaystackPlugin.initialize(
+                        publicKey:
+                            'pk_test_1e940f03cf739240b2c5a044553bd871c669f773');
+                  },
+                  text: "initialize"),
               BlocListener<PaymentBloc, PaymentState>(
                   child: Padding(
                     padding: const EdgeInsets.only(bottom: 8.0),
                     child: CommonButton(
-                        onPressed: () =>
-                            paymentBloc.add(MakePayment(1000, context)),
+                        onPressed: () async {
+                          // paymentBloc.add(MakePayment(context));
+                          Charge charge = Charge()
+                            ..amount = 100000
+                            ..email = "email@email.com"
+                            ..putCustomField("Charged From:", "Flutter Plugin")
+                            ..reference = "dfdfdf";
+
+                          CheckoutResponse response =
+                              await PaystackPlugin.checkout(
+                                  context,
+                                  method: CheckoutMethod.card,
+                                  charge: charge,
+                                  fullscreen: false,
+                                  logo: SvgPicture.asset(
+                                      'assets/images/logo.svg'));
+                          print(response.toString());
+                        },
                         text: 'Go Home'),
                   ),
                   listener: (context, state) {
-                    state.maybeMap(
-                        orElse: () => 1,
-                        paymentFailed: (f) =>
-                            globalKey.currentState.showSnackBar(SnackBar(
-                              content: Text(f.failure.message),
-                            )),
-                        paymentSucceeded: (s) =>
-                            Navigator.pushNamed(context, '/SetupBeepThree'));
+                    // state.maybeMap(
+                    //     orElse: () => 1,
+                    //     paymentFailed: (f) =>
+                    //         globalKey.currentState.showSnackBar(SnackBar(
+                    //           content: Text(f.failure.message),
+                    //         )),
+                    //     paymentSucceeded: (s) =>
+                    //         Navigator.pushNamed(context, '/SetupBeepThree'));
                   }),
             ],
           ),
