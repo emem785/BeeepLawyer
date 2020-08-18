@@ -15,60 +15,60 @@ class MoreMenu extends StatelessWidget {
     final userBloc = BlocProvider.of<UserBloc>(context);
     final navBloc = BlocProvider.of<NavigationBloc>(context);
     return Container(
-      color: Colors.white,
-      child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 64, horizontal: 24),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.only(bottom: 35.0),
-              child: Text('More',
-                  style: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.w600,
-                      fontFamily: 'Nunito')),
-            ),
-            BlocListener<UserBloc, UserState>(
-              listener: (_, state) {
-                return state.maybeMap(
-                    orElse: () => 1,
-                    userLoaded: (u) => Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => ProfileMenu(user: u.user))));
-              },
-              child: InkWell(
-                onTap: () => userBloc.add(InsertUser()),
-                child: MenuItem(
-                    icon: SvgPicture.asset('assets/images/User.svg'),
-                    mainText: 'Profile',
-                    subText: 'Edit your profile details'),
-              ),
-            ),
-            
-            InkWell(
-              onTap: () {},
-              child: MenuItem(
-                  icon: SvgPicture.asset('assets/images/Share.svg'),
-                  mainText: 'Invite',
-                  subText: 'Spread the word'),
-            ),
-            InkWell(
-              onTap: () {
-                authBloc.add(SignOut());
-                navBloc.add(ChangeNavState(2));
-                Navigator.of(context).pushNamedAndRemoveUntil(
-                    '/SplashScreen', (Route<dynamic> route) => false);
-              },
-              child: MenuItem(
-                  icon: SvgPicture.asset('assets/images/logout.svg'),
-                  mainText: 'Log Out',
-                  subText: 'Log out of your account'),
-            ),
-          ],
+        color: Colors.white,
+        child: Padding(
+    padding: const EdgeInsets.symmetric(vertical: 64, horizontal: 24),
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        Padding(
+          padding: const EdgeInsets.only(bottom: 35.0),
+          child: Text('More',
+              style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.w600,
+                  fontFamily: 'Nunito')),
         ),
-      ),
-    );
+        BlocListener<UserBloc, UserState>(
+          listener: (_, state) {
+            return state.maybeMap(
+                orElse: () => 1,
+                userLoaded: (u) => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => ProfileMenu(user: u.user),settings: RouteSettings(name: "Profile"))));
+          },
+          child: InkWell(
+            onTap: () => userBloc.add(InsertUser()),
+            child: MenuItem(
+                icon: SvgPicture.asset('assets/images/User.svg'),
+                mainText: 'Profile',
+                subText: 'Edit your profile details'),
+          ),
+        ),
+        
+        InkWell(
+          onTap: () {},
+          child: MenuItem(
+              icon: SvgPicture.asset('assets/images/Share.svg'),
+              mainText: 'Invite',
+              subText: 'Spread the word'),
+        ),
+        InkWell(
+          onTap: () {
+            authBloc.add(SignOut());
+            navBloc.add(ChangeNavState(2));
+            Navigator.of(context).pushNamedAndRemoveUntil(
+                '/SplashScreen', (Route<dynamic> route) => false);
+          },
+          child: MenuItem(
+              icon: SvgPicture.asset('assets/images/logout.svg'),
+              mainText: 'Log Out',
+              subText: 'Log out of your account'),
+        ),
+      ],
+    ),
+        ),
+      );
   }
 }

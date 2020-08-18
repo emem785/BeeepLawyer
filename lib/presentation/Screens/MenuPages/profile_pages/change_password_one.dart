@@ -32,7 +32,7 @@ class _ChangePasswordOneState extends State<ChangePasswordOne> {
   void dispose() {
     super.dispose();
     _smsCode.dispose();
-    _timer.cancel();
+    // _timer.cancel();
   }
 
   @override
@@ -105,7 +105,7 @@ class _ChangePasswordOneState extends State<ChangePasswordOne> {
                           child: InkWell(
                             onTap: () {
                               registerBloc.add(GetCode(widget.phone));
-                            }, // timer() ,
+                            }, 
                             child: Row(
                               children: <Widget>[
                                 Text(

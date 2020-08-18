@@ -26,7 +26,7 @@ void main() {
         ),
         BlocProvider(create: (context) => getIt<RegisterBloc>()),
         BlocProvider(create: (_) => getIt<UserBloc>()),
-        BlocProvider(create: (_) => NavigationBloc())
+        BlocProvider(create: (_) => getIt<NavigationBloc>())
       ],
       child: MaterialApp(
         theme: ThemeData(
