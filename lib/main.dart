@@ -1,3 +1,4 @@
+import 'package:beep_lawyer2/core/utils/StyleGuide.dart';
 import 'package:beep_lawyer2/injectable.dart';
 import 'package:beep_lawyer2/application/blocs/auth_bloc/auth_bloc.dart';
 import 'package:flutter/material.dart';
@@ -25,13 +26,13 @@ void main() {
         ),
         BlocProvider(create: (context) => getIt<RegisterBloc>()),
         BlocProvider(create: (_) => getIt<UserBloc>()),
-        BlocProvider(create: (_) => NavigationBloc())
+        BlocProvider(create: (_) => getIt<NavigationBloc>())
       ],
       child: MaterialApp(
         theme: ThemeData(
           fontFamily: 'Space Mono',
           buttonTheme: ButtonThemeData(minWidth: 366, height: 50),
-          primaryColor: Colors.brown,
+          primaryColor: primaryColor,
           textTheme: TextTheme(
             button: TextStyle(fontFamily: 'Nunito', fontSize: 16),
           ),

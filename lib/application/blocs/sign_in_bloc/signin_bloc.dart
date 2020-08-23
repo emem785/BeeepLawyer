@@ -1,7 +1,6 @@
 import 'dart:async';
 
 
-import 'package:beep_lawyer2/application/blocs/auth_bloc/auth_bloc.dart';
 import 'package:beep_lawyer2/domain/Interface/api_interface.dart';
 import 'package:beep_lawyer2/domain/Interface/local_storage_interface.dart';
 import 'package:bloc/bloc.dart';
@@ -14,8 +13,6 @@ part 'signin_event.dart';
 part 'signin_state.dart';
 part 'signin_bloc.freezed.dart';
 
-const USER_KEY = 'user';
-const TOKEN_KEY = 'token';
 
 @injectable
 class SigninBloc extends Bloc<SignInEvent, SignInState> {

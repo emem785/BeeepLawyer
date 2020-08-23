@@ -15,16 +15,16 @@ class PlanDescription extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.only(left: 16.0),
           child: Text(
-              '${isEssential ? 'Unlimited' : '1'} Beeep buddy\nAccess to pool of lawyers\n${isEssential ? '3' : '1'} devices'),
+              'Access to pool of citizens\n${isEssential ? '3' : '1'} devices'),
         ),
         Padding(
           padding: const EdgeInsets.only(left: 16.0),
           child: Text.rich(TextSpan(children: <TextSpan>[
             TextSpan(
-                text: '\n₦${isEssential ? '3000' : '1000'}/',
+                text: '\n₦${isEssential ? '2500' : '1000'}/',
                 style: TextStyle(fontSize: 16)),
             TextSpan(
-                text: '${isEssential ? '1 year' : '3 months'}',
+                text: '${isEssential ? '1 year' : '6 months'}',
                 style: TextStyle(fontSize: 14))
           ])),
         ),

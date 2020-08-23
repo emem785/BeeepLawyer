@@ -10,7 +10,7 @@ class SetupBeepThree extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.fromLTRB(24, 216, 24, 0),
         child: SingleChildScrollView(
-                  child: Column(
+          child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
               SvgPicture.asset('assets/images/Success.svg'),
@@ -18,7 +18,19 @@ class SetupBeepThree extends StatelessWidget {
                 alignment: Alignment.center,
                 child: Padding(
                   padding: const EdgeInsets.only(top: 34.0),
-                  child: Text('Payment successful !', style: TextStyle(fontFamily: 'Nunito', fontSize: 24)),
+                  child: Text('Payment successful !',
+                      style: TextStyle(fontFamily: 'Nunito', fontSize: 24)),
+                ),
+              ),
+              Align(
+                alignment: Alignment.center,
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 16.0),
+                  child: Text(
+                    'Now you can start receving request',
+                    style: successSub,
+                    textAlign: TextAlign.center,
+                  ),
                 ),
               ),
               Align(
@@ -31,12 +43,13 @@ class SetupBeepThree extends StatelessWidget {
                   ),
                 ),
               ),
-                                    
               Padding(
-                padding: const EdgeInsets.only(bottom:8.0),
-                child: CommonButton(onPressed: ()=> Navigator.pushNamed(context, '/HomeScreen'), text: 'Go Home'),
+                padding: const EdgeInsets.only(bottom: 8.0),
+                child: CommonButton(
+                    onPressed: () =>
+                        Navigator.pushNamed(context, '/HomeScreen'),
+                    text: 'Go Home'),
               ),
-              
             ],
           ),
         ),

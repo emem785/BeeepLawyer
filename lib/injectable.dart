@@ -1,6 +1,6 @@
 
 
-import 'package:beep_lawyer2/injectable.iconfig.dart';
+import 'package:beep_lawyer2/injectable.config.dart';
 import 'package:get_it/get_it.dart';
 import 'package:injectable/injectable.dart';
 

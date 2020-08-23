@@ -64,20 +64,20 @@ class _ReceiveBeepState extends State<ReceiveBeep> {
                       markerStream: b.mapTool.markerStreamController.stream),
                 );
               })),
-              Align(
-                alignment: Alignment.bottomCenter,
-                child:
-                    BlocBuilder<MapBloc, MapState>(builder: (context, state) {
-                  return state.maybeMap(
-                      orElse: () => SizedBox(),
-                      mapRendered: (r) => BottomContainer(
-                          height: size.maxHeight * 0.2, buddy: r.buddy),
-                      broadcastStarted: (b) => BottomContainer(
-                          height: size.maxHeight * 0.2, buddy: b.buddy),
-                      loading: (l) =>
-                          BottomContainerLoading(height: size.maxHeight * 0.2));
-                }),
-              ),
+              // Align(
+              //   alignment: Alignment.bottomCenter,
+              //   child:
+              //       BlocBuilder<MapBloc, MapState>(builder: (context, state) {
+              //     return state.maybeMap(
+              //         orElse: () => SizedBox(),
+              //         mapRendered: (r) => BottomContainer(
+              //             height: size.maxHeight * 0.2, buddy: r.buddy),
+              //         broadcastStarted: (b) => BottomContainer(
+              //             height: size.maxHeight * 0.2, buddy: b.buddy),
+              //         loading: (l) =>
+              //             BottomContainerLoading(height: size.maxHeight * 0.2));
+              //   }),
+              // ),
               BlocBuilder<MapBloc, MapState>(builder: (context, state) {
                 return state.maybeMap(
                     mapRendered: (r) => TopBar(address: "Getting Location..."),

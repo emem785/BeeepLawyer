@@ -10,6 +10,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 const USER_KEY = 'user';
 const TOKEN_KEY = 'token';
 const BUDDY_KEY = 'buddy';
+const ON_CALL_KEY = 'onCall';
 
 //This module is used for caching local data
 
@@ -63,6 +64,29 @@ class LocalStorageImpl implements LocalStorageInterface {
   }
 
   @override
+  Future cacheOncall(bool onCall) async {
+    final prefs = await SharedPreferences.getInstance();
+    prefs.setBool(ON_CALL_KEY, onCall);
+  }
+
+  @override
+  Future removeOnCall() async {
+    final prefs = await SharedPreferences.getInstance();
+    prefs.remove(ON_CALL_KEY);
+  }
+
+  @override
+  Future<Either<Failure, bool>> getOnCall() async {
+    final prefs = await SharedPreferences.getInstance();
+    bool data = prefs.getBool(ON_CALL_KEY);
+    if (data == null) {
+      return Left(CacheFailure("token not available"));
+    } else {
+      return right(data);
+    }
+  }
+
+  @override
   Future<User> cacheUserFromRegister(
       Map<String, dynamic> map, String phoneNumber) async {
     final userMap = map["response"]["content"]["details"];
@@ -93,5 +117,14 @@ class LocalStorageImpl implements LocalStorageInterface {
     final user = User.fromJson(jsonDecode(userString));
     user.scnNumber = scnNumber;
     await cacheUser(jsonEncode(user));
+  }
+
+  @override
+  Future<String> getPhoneNumber() async {
+    final response = await getUser();
+    final user =
+        response.fold((l) => null, (r) => User.fromJson(jsonDecode(r)));
+    final phone = user.phone;
+    return phone;
   }
 }

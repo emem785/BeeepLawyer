@@ -1,4 +1,5 @@
 import 'package:beep_lawyer2/application/blocs/location_bloc/location_bloc.dart';
+import 'package:beep_lawyer2/core/utils/StyleGuide.dart';
 import 'package:flutter/material.dart';
 
 class StopBeep extends StatelessWidget {
@@ -13,11 +14,11 @@ class StopBeep extends StatelessWidget {
   Widget build(BuildContext context) {
     return RaisedButton(
       onPressed: () {
-        locationBloc.add(StopBroadcast());
+        locationBloc.add(StopOnCallSession());
       },
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
-      color: Colors.red,
-      child: Text('STOP BEEEP',
+      color: beepButtonPink,
+      child: Text('Go Offline',
           style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600)),
     );
   }
@@ -35,11 +36,11 @@ class ResumeBeep extends StatelessWidget {
   Widget build(BuildContext context) {
     return RaisedButton(
       onPressed: () {
-        locationBloc.add(ResumeBroadcast());
+        locationBloc.add(ResumeOnCallSession());
       },
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
-      color: Colors.green,
-      child: Text('SEND BEEEP',
+      color: Colors.brown,
+      child: Text('Go Online',
           style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600)),
     );
   }
@@ -57,11 +58,11 @@ class StartBeep extends StatelessWidget {
   Widget build(BuildContext context) {
     return RaisedButton(
       onPressed: () {
-        locationBloc.add(BroadcastLocation());
+        locationBloc.add(StartOnCallSession());
       },
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
-      color: Colors.green,
-      child: Text('SEND BEEEP',
+      color: Colors.brown,
+      child: Text('Go Online',
           style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600)),
     );
   }

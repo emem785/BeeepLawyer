@@ -1,3 +1,4 @@
+import 'package:beep_lawyer2/core/utils/StyleGuide.dart';
 import 'package:beep_lawyer2/core/widgets/common_widgets/common_button.dart';
 import 'package:beep_lawyer2/core/widgets/common_widgets/custom_text_form_field.dart';
 import 'package:beep_lawyer2/core/widgets/common_widgets/spinner.dart';
@@ -40,13 +41,13 @@ class _ChangePasswordThreeState extends State<ChangePasswordThree> {
         leading: IconButton(
             icon: Icon(
               Icons.arrow_back,
-              color: Colors.brown,
+              color: primaryColor,
             ),
             onPressed: () => Navigator.pop(context)),
         titleSpacing: 0.1,
         title: Text(
           'Back',
-          style: TextStyle(color: Colors.brown),
+          style: TextStyle(color: primaryColor),
         ),
         elevation: 0.0,
         backgroundColor: Colors.transparent,
@@ -69,7 +70,8 @@ class _ChangePasswordThreeState extends State<ChangePasswordThree> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      CustomTextFieldPassword(controller: _password, header: 'Password'),
+                      CustomTextFieldPassword(
+                          controller: _password, header: 'Password'),
                       BlocConsumer<UserBloc, UserState>(
                         listener: (_, state) {
                           return state.maybeMap(
@@ -80,14 +82,11 @@ class _ChangePasswordThreeState extends State<ChangePasswordThree> {
                                   _key.currentState.showSnackBar(SnackBar(
                                       content: Text(u.msg),
                                       action: SnackBarAction(
-                                          label: "Go Home",
+                                          label: "Go Back",
                                           onPressed: () {
-                                            navBloc.add(ChangeNavState(1));
-                                            Navigator.of(context)
-                                                .pushNamedAndRemoveUntil(
-                                                    '/HomeScreen',
-                                                    (Route<dynamic> route) =>
-                                                        false);
+                                            navBloc.add(ChangeNavState(0));
+                                            Navigator.of(context).popUntil(
+                                                ModalRoute.withName("Profile"));
                                           }))));
                         },
                         builder: (_, state) {

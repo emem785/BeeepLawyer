@@ -48,8 +48,6 @@ class MapBloc extends Bloc<MapEvent, MapState> {
         add(StartBroadcast(mapTool, locationAndBuddy[1]));
       },
       startBroadcast: (e) async* {
-        mapTool = await mapInterface.getMapToolWithAddressFromApi(
-            e.mapTool, e.buddy.phonenumber);
         _mapUpdateSubscription = mapInterface.startMapUpdateStreamFromApi(
             mapTool, e.buddy.phonenumber);
         yield BroadcastStarted(e.buddy, mapTool);

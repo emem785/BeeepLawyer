@@ -5,6 +5,7 @@ import 'package:beep_lawyer2/infrastructure/models/user.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:beep_lawyer2/application/blocs/user_bloc/user_bloc.dart';
+import '../../../../application/blocs/navigation_bloc/navigation_bloc.dart';
 
 class ProfileMenu extends StatefulWidget {
   final User user;
@@ -50,13 +51,17 @@ class _ProfileMenuState extends State<ProfileMenu> {
         leading: IconButton(
             icon: Icon(
               Icons.arrow_back,
-              color: Colors.black,
+              color: primaryColor,
             ),
-            onPressed: () => Navigator.pop(context)),
+            onPressed: () {
+              Navigator.pop(context);
+              context.bloc<NavigationBloc>().add(ChangeNavState(1));
+
+            }),
         titleSpacing: 0.1,
         title: Text(
           'Profile',
-          style: TextStyle(color: Colors.black),
+          style: TextStyle(color: primaryColor),
         ),
         elevation: 0.0,
         backgroundColor: Colors.transparent,

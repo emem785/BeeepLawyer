@@ -34,13 +34,13 @@ class _SetupBeepTwoState extends State<SetupBeepTwo> {
         leading: IconButton(
             icon: Icon(
               Icons.arrow_back,
-              color: Colors.black,
+              color: primaryColor,
             ),
             onPressed: () => Navigator.pop(context)),
         titleSpacing: 0.1,
         title: Text(
           'Back',
-          style: TextStyle(color: Colors.black, fontFamily: 'NUnito'),
+          style: TextStyle(color: primaryColor, fontFamily: 'NUnito'),
         ),
         elevation: 0.0,
         backgroundColor: Colors.transparent,
