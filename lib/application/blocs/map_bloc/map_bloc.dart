@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:convert';
 
+<<<<<<< HEAD
 import 'package:beep_lawyer_3/application/blocs/location_bloc/location_bloc.dart';
 import 'package:beep_lawyer_3/core/error/failure.dart';
 import 'package:beep_lawyer_3/domain/Interface/api_interface.dart';
@@ -9,6 +10,16 @@ import 'package:beep_lawyer_3/domain/Interface/location_interface.dart';
 import 'package:beep_lawyer_3/domain/Interface/map_interface.dart';
 import 'package:beep_lawyer_3/infrastructure/models/buddy.dart';
 import 'package:beep_lawyer_3/infrastructure/models/location.dart';
+=======
+import 'package:beep_lawyer2/application/blocs/location_bloc/location_bloc.dart';
+import 'package:beep_lawyer2/core/error/failure.dart';
+import 'package:beep_lawyer2/domain/Interface/api_interface.dart';
+import 'package:beep_lawyer2/domain/Interface/local_storage_interface.dart';
+import 'package:beep_lawyer2/domain/Interface/location_interface.dart';
+import 'package:beep_lawyer2/domain/Interface/map_interface.dart';
+import 'package:beep_lawyer2/infrastructure/models/buddy.dart';
+import 'package:beep_lawyer2/infrastructure/models/location.dart';
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
 import 'package:bloc/bloc.dart';
 import 'package:dartz/dartz.dart';
 import 'package:injectable/injectable.dart';
@@ -40,6 +51,7 @@ class MapBloc extends Bloc<MapEvent, MapState> {
   Stream<MapState> mapEventToState(
     MapEvent event,
   ) async* {
+<<<<<<< HEAD
      yield MapLoading();
     yield* event.map(
       renderClientMap: (e) async* {
@@ -53,6 +65,19 @@ class MapBloc extends Bloc<MapEvent, MapState> {
         _mapUpdateSubscription = mapInterface.startMapUpdateStreamFromApi(
             e.mapTool, e.buddy.phonenumber);
         yield BroadcastStarted(e.buddy, e.mapTool);
+=======
+    yield MapLoading();
+    yield* event.map(
+      renderBuddyMap: (e) async* {
+        final locationAndBuddy = await _getBuddyLocation();
+        final mapTool = MapTool(location: locationAndBuddy[0]);
+        add(StartBroadcast(mapTool, locationAndBuddy[1]));
+      },
+      startBroadcast: (e) async* {
+        _mapUpdateSubscription = mapInterface.startMapUpdateStreamFromApi(
+            mapTool, e.buddy.phonenumber);
+        yield BroadcastStarted(e.buddy, mapTool);
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
       },
       stopSecondBroadcast: (e) async* {
         _mapUpdateSubscription.cancel();
@@ -61,9 +86,19 @@ class MapBloc extends Bloc<MapEvent, MapState> {
     );
   }
 
+<<<<<<< HEAD
   Future<Location> _getBuddyLocation(String phoneNumber) async {
     final location = await apiInterface.getLocation(phoneNumber).first;
     return location;
   }
 
+=======
+  Future<List> _getBuddyLocation() async {
+    // final response = await localStorageInterface.getBuddy();
+    // final buddy =
+    //     response.fold((l) => null, (r) => Buddy.fromJson(jsonDecode(r)));
+    // final location = await apiInterface.getLocation(buddy.phonenumber).first;
+    return [Location(latitude: 2222,longitude: 5555), Buddy(firstname: "dff")];
+  }
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
 }

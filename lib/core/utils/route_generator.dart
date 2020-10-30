@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import 'package:beep_lawyer_3/presentation/Screens/AppPages/home_screen.dart';
 import 'package:beep_lawyer_3/presentation/Screens/AppPages/menu_pages/upgrade_plan.dart';
 import 'package:beep_lawyer_3/presentation/Screens/AppPages/menu_pages/upgrade_plan2.dart';
@@ -22,6 +23,32 @@ import 'package:beep_lawyer_3/presentation/Screens/MenuPages/profile_pages/chang
 import 'package:beep_lawyer_3/presentation/Screens/MenuPages/profile_pages/change_password_three.dart';
 import 'package:beep_lawyer_3/presentation/Screens/MenuPages/profile_pages/change_password_two.dart';
 import 'package:beep_lawyer_3/presentation/Screens/MenuPages/profile_pages/profiles_menu.dart';
+=======
+import 'package:beep_lawyer2/presentation/Screens/AppPages/home_screen.dart';
+import 'package:beep_lawyer2/presentation/Screens/AppPages/menu_pages/upgrade_plan.dart';
+import 'package:beep_lawyer2/presentation/Screens/AppPages/menu_pages/upgrade_plan2.dart';
+import 'package:beep_lawyer2/presentation/Screens/AppPages/receive_beep_page.dart';
+import 'package:beep_lawyer2/presentation/Screens/Authentication/Login/Forgot_Password/forgot_password.dart';
+import 'package:beep_lawyer2/presentation/Screens/Authentication/Login/Forgot_Password/forgot_password_five.dart';
+import 'package:beep_lawyer2/presentation/Screens/Authentication/Login/Forgot_Password/forgot_password_four.dart';
+import 'package:beep_lawyer2/presentation/Screens/Authentication/Login/Forgot_Password/forgot_password_three.dart';
+import 'package:beep_lawyer2/presentation/Screens/Authentication/Login/Forgot_Password/forgot_password_two.dart';
+import 'package:beep_lawyer2/presentation/Screens/Authentication/Login/login_one.dart';
+import 'package:beep_lawyer2/presentation/Screens/Authentication/Register/register_five.dart';
+import 'package:beep_lawyer2/presentation/Screens/Authentication/Register/register_four.dart';
+import 'package:beep_lawyer2/presentation/Screens/Authentication/Register/register_one.dart';
+import 'package:beep_lawyer2/presentation/Screens/Authentication/Register/register_three.dart';
+import 'package:beep_lawyer2/presentation/Screens/Authentication/Register/register_two.dart';
+import 'package:beep_lawyer2/presentation/Screens/Authentication/Register/setup_beep/setup_beep_three.dart';
+import 'package:beep_lawyer2/presentation/Screens/Authentication/Register/setup_beep/setup_beep.dart';
+import 'package:beep_lawyer2/presentation/Screens/Authentication/Register/setup_beep/setup_beep_two.dart';
+import 'package:beep_lawyer2/presentation/Screens/Authentication/auth_control.dart';
+import 'package:beep_lawyer2/presentation/Screens/Authentication/splash_screen.dart';
+import 'package:beep_lawyer2/presentation/Screens/MenuPages/profile_pages/change_password_one.dart';
+import 'package:beep_lawyer2/presentation/Screens/MenuPages/profile_pages/change_password_three.dart';
+import 'package:beep_lawyer2/presentation/Screens/MenuPages/profile_pages/change_password_two.dart';
+import 'package:beep_lawyer2/presentation/Screens/MenuPages/profile_pages/profiles_menu.dart';
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
 import 'package:flutter/material.dart';
 
 class RouteGenerator {
@@ -39,11 +66,19 @@ class RouteGenerator {
           break;
 
         case '/HomeScreen':
+<<<<<<< HEAD
           screen = HomeInitializer();
           break;
 
         case '/ReceiveBeep':
           screen = ReceiveBeepPage(buddy: args["buddy"]);
+=======
+          screen = HomeScreen();
+          break;
+
+        case '/ReceiveBeep':
+          screen = ReceiveBeepPage();
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
           break;
         //Registration Pages
 

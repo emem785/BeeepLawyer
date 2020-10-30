@@ -1,5 +1,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+<<<<<<< HEAD
     package="com.example.beep_lawyer_3">
+=======
+    package="com.example.beep_lawyer2">
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     <!-- Flutter needs it to communicate with the running application
          to allow setting breakpoints, to provide hot reload, etc.
     -->

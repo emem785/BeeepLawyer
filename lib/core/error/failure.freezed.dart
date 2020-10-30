@@ -46,6 +46,7 @@ class _$FailureTearOff {
       message,
     );
   }
+<<<<<<< HEAD
 
 // ignore: unused_element
   PlatformFailure platformFailure(String message) {
@@ -53,6 +54,8 @@ class _$FailureTearOff {
       message,
     );
   }
+=======
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
 }
 
 // ignore: unused_element
@@ -68,7 +71,10 @@ mixin _$Failure {
     @required Result notAuthorized(String message),
     @required Result serverFailure(String message),
     @required Result cacheFailure(String message),
+<<<<<<< HEAD
     @required Result platformFailure(String message),
+=======
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
   });
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
@@ -77,7 +83,10 @@ mixin _$Failure {
     Result notAuthorized(String message),
     Result serverFailure(String message),
     Result cacheFailure(String message),
+<<<<<<< HEAD
     Result platformFailure(String message),
+=======
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     @required Result orElse(),
   });
   @optionalTypeArgs
@@ -87,7 +96,10 @@ mixin _$Failure {
     @required Result notAuthorized(NotAuthorized value),
     @required Result serverFailure(ServerFailure value),
     @required Result cacheFailure(CacheFailure value),
+<<<<<<< HEAD
     @required Result platformFailure(PlatformFailure value),
+=======
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
   });
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
@@ -96,7 +108,10 @@ mixin _$Failure {
     Result notAuthorized(NotAuthorized value),
     Result serverFailure(ServerFailure value),
     Result cacheFailure(CacheFailure value),
+<<<<<<< HEAD
     Result platformFailure(PlatformFailure value),
+=======
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     @required Result orElse(),
   });
 
@@ -186,14 +201,20 @@ class _$UserExist implements UserExist {
     @required Result notAuthorized(String message),
     @required Result serverFailure(String message),
     @required Result cacheFailure(String message),
+<<<<<<< HEAD
     @required Result platformFailure(String message),
+=======
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
   }) {
     assert(userExist != null);
     assert(noCredentials != null);
     assert(notAuthorized != null);
     assert(serverFailure != null);
     assert(cacheFailure != null);
+<<<<<<< HEAD
     assert(platformFailure != null);
+=======
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     return userExist(message);
   }
 
@@ -205,7 +226,10 @@ class _$UserExist implements UserExist {
     Result notAuthorized(String message),
     Result serverFailure(String message),
     Result cacheFailure(String message),
+<<<<<<< HEAD
     Result platformFailure(String message),
+=======
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -223,14 +247,20 @@ class _$UserExist implements UserExist {
     @required Result notAuthorized(NotAuthorized value),
     @required Result serverFailure(ServerFailure value),
     @required Result cacheFailure(CacheFailure value),
+<<<<<<< HEAD
     @required Result platformFailure(PlatformFailure value),
+=======
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
   }) {
     assert(userExist != null);
     assert(noCredentials != null);
     assert(notAuthorized != null);
     assert(serverFailure != null);
     assert(cacheFailure != null);
+<<<<<<< HEAD
     assert(platformFailure != null);
+=======
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     return userExist(this);
   }
 
@@ -242,7 +272,10 @@ class _$UserExist implements UserExist {
     Result notAuthorized(NotAuthorized value),
     Result serverFailure(ServerFailure value),
     Result cacheFailure(CacheFailure value),
+<<<<<<< HEAD
     Result platformFailure(PlatformFailure value),
+=======
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -324,14 +357,20 @@ class _$NoCredentials implements NoCredentials {
     @required Result notAuthorized(String message),
     @required Result serverFailure(String message),
     @required Result cacheFailure(String message),
+<<<<<<< HEAD
     @required Result platformFailure(String message),
+=======
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
   }) {
     assert(userExist != null);
     assert(noCredentials != null);
     assert(notAuthorized != null);
     assert(serverFailure != null);
     assert(cacheFailure != null);
+<<<<<<< HEAD
     assert(platformFailure != null);
+=======
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     return noCredentials(message);
   }
 
@@ -343,7 +382,10 @@ class _$NoCredentials implements NoCredentials {
     Result notAuthorized(String message),
     Result serverFailure(String message),
     Result cacheFailure(String message),
+<<<<<<< HEAD
     Result platformFailure(String message),
+=======
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -361,14 +403,20 @@ class _$NoCredentials implements NoCredentials {
     @required Result notAuthorized(NotAuthorized value),
     @required Result serverFailure(ServerFailure value),
     @required Result cacheFailure(CacheFailure value),
+<<<<<<< HEAD
     @required Result platformFailure(PlatformFailure value),
+=======
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
   }) {
     assert(userExist != null);
     assert(noCredentials != null);
     assert(notAuthorized != null);
     assert(serverFailure != null);
     assert(cacheFailure != null);
+<<<<<<< HEAD
     assert(platformFailure != null);
+=======
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     return noCredentials(this);
   }
 
@@ -380,7 +428,10 @@ class _$NoCredentials implements NoCredentials {
     Result notAuthorized(NotAuthorized value),
     Result serverFailure(ServerFailure value),
     Result cacheFailure(CacheFailure value),
+<<<<<<< HEAD
     Result platformFailure(PlatformFailure value),
+=======
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -462,14 +513,20 @@ class _$NotAuthorized implements NotAuthorized {
     @required Result notAuthorized(String message),
     @required Result serverFailure(String message),
     @required Result cacheFailure(String message),
+<<<<<<< HEAD
     @required Result platformFailure(String message),
+=======
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
   }) {
     assert(userExist != null);
     assert(noCredentials != null);
     assert(notAuthorized != null);
     assert(serverFailure != null);
     assert(cacheFailure != null);
+<<<<<<< HEAD
     assert(platformFailure != null);
+=======
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     return notAuthorized(message);
   }
 
@@ -481,7 +538,10 @@ class _$NotAuthorized implements NotAuthorized {
     Result notAuthorized(String message),
     Result serverFailure(String message),
     Result cacheFailure(String message),
+<<<<<<< HEAD
     Result platformFailure(String message),
+=======
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -499,14 +559,20 @@ class _$NotAuthorized implements NotAuthorized {
     @required Result notAuthorized(NotAuthorized value),
     @required Result serverFailure(ServerFailure value),
     @required Result cacheFailure(CacheFailure value),
+<<<<<<< HEAD
     @required Result platformFailure(PlatformFailure value),
+=======
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
   }) {
     assert(userExist != null);
     assert(noCredentials != null);
     assert(notAuthorized != null);
     assert(serverFailure != null);
     assert(cacheFailure != null);
+<<<<<<< HEAD
     assert(platformFailure != null);
+=======
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     return notAuthorized(this);
   }
 
@@ -518,7 +584,10 @@ class _$NotAuthorized implements NotAuthorized {
     Result notAuthorized(NotAuthorized value),
     Result serverFailure(ServerFailure value),
     Result cacheFailure(CacheFailure value),
+<<<<<<< HEAD
     Result platformFailure(PlatformFailure value),
+=======
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -600,14 +669,20 @@ class _$ServerFailure implements ServerFailure {
     @required Result notAuthorized(String message),
     @required Result serverFailure(String message),
     @required Result cacheFailure(String message),
+<<<<<<< HEAD
     @required Result platformFailure(String message),
+=======
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
   }) {
     assert(userExist != null);
     assert(noCredentials != null);
     assert(notAuthorized != null);
     assert(serverFailure != null);
     assert(cacheFailure != null);
+<<<<<<< HEAD
     assert(platformFailure != null);
+=======
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     return serverFailure(message);
   }
 
@@ -619,7 +694,10 @@ class _$ServerFailure implements ServerFailure {
     Result notAuthorized(String message),
     Result serverFailure(String message),
     Result cacheFailure(String message),
+<<<<<<< HEAD
     Result platformFailure(String message),
+=======
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -637,14 +715,20 @@ class _$ServerFailure implements ServerFailure {
     @required Result notAuthorized(NotAuthorized value),
     @required Result serverFailure(ServerFailure value),
     @required Result cacheFailure(CacheFailure value),
+<<<<<<< HEAD
     @required Result platformFailure(PlatformFailure value),
+=======
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
   }) {
     assert(userExist != null);
     assert(noCredentials != null);
     assert(notAuthorized != null);
     assert(serverFailure != null);
     assert(cacheFailure != null);
+<<<<<<< HEAD
     assert(platformFailure != null);
+=======
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     return serverFailure(this);
   }
 
@@ -656,7 +740,10 @@ class _$ServerFailure implements ServerFailure {
     Result notAuthorized(NotAuthorized value),
     Result serverFailure(ServerFailure value),
     Result cacheFailure(CacheFailure value),
+<<<<<<< HEAD
     Result platformFailure(PlatformFailure value),
+=======
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -738,14 +825,20 @@ class _$CacheFailure implements CacheFailure {
     @required Result notAuthorized(String message),
     @required Result serverFailure(String message),
     @required Result cacheFailure(String message),
+<<<<<<< HEAD
     @required Result platformFailure(String message),
+=======
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
   }) {
     assert(userExist != null);
     assert(noCredentials != null);
     assert(notAuthorized != null);
     assert(serverFailure != null);
     assert(cacheFailure != null);
+<<<<<<< HEAD
     assert(platformFailure != null);
+=======
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     return cacheFailure(message);
   }
 
@@ -757,7 +850,10 @@ class _$CacheFailure implements CacheFailure {
     Result notAuthorized(String message),
     Result serverFailure(String message),
     Result cacheFailure(String message),
+<<<<<<< HEAD
     Result platformFailure(String message),
+=======
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -775,14 +871,20 @@ class _$CacheFailure implements CacheFailure {
     @required Result notAuthorized(NotAuthorized value),
     @required Result serverFailure(ServerFailure value),
     @required Result cacheFailure(CacheFailure value),
+<<<<<<< HEAD
     @required Result platformFailure(PlatformFailure value),
+=======
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
   }) {
     assert(userExist != null);
     assert(noCredentials != null);
     assert(notAuthorized != null);
     assert(serverFailure != null);
     assert(cacheFailure != null);
+<<<<<<< HEAD
     assert(platformFailure != null);
+=======
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     return cacheFailure(this);
   }
 
@@ -794,7 +896,10 @@ class _$CacheFailure implements CacheFailure {
     Result notAuthorized(NotAuthorized value),
     Result serverFailure(ServerFailure value),
     Result cacheFailure(CacheFailure value),
+<<<<<<< HEAD
     Result platformFailure(PlatformFailure value),
+=======
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -813,6 +918,7 @@ abstract class CacheFailure implements Failure {
   @override
   $CacheFailureCopyWith<CacheFailure> get copyWith;
 }
+<<<<<<< HEAD
 
 abstract class $PlatformFailureCopyWith<$Res>
     implements $FailureCopyWith<$Res> {
@@ -952,3 +1058,5 @@ abstract class PlatformFailure implements Failure {
   @override
   $PlatformFailureCopyWith<PlatformFailure> get copyWith;
 }
+=======
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f

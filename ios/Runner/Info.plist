@@ -11,7 +11,11 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
+<<<<<<< HEAD
 	<string>beep_lawyer_3</string>
+=======
+	<string>beep_lawyer2</string>
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>

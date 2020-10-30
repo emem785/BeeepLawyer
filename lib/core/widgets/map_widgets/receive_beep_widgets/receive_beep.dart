@@ -1,11 +1,19 @@
 import 'dart:async';
 
+<<<<<<< HEAD
 import 'package:beep_lawyer_3/application/blocs/address_bloc/address_bloc.dart';
 import 'package:beep_lawyer_3/application/blocs/auth_bloc/auth_bloc.dart';
 import 'package:beep_lawyer_3/core/widgets/map_widgets/receive_beep_widgets/bottom_container.dart';
 import 'package:beep_lawyer_3/core/widgets/map_widgets/top_bar.dart';
 import 'package:beep_lawyer_3/application/blocs/map_bloc/map_bloc.dart';
 import 'package:beep_lawyer_3/core/utils/StyleGuide.dart';
+=======
+import 'package:beep_lawyer2/application/blocs/auth_bloc/auth_bloc.dart';
+import 'package:beep_lawyer2/core/widgets/map_widgets/receive_beep_widgets/bottom_container.dart';
+import 'package:beep_lawyer2/core/widgets/map_widgets/top_bar.dart';
+import 'package:beep_lawyer2/application/blocs/map_bloc/map_bloc.dart';
+import 'package:beep_lawyer2/core/utils/StyleGuide.dart';
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
@@ -79,6 +87,7 @@ class _ReceiveBeepState extends State<ReceiveBeep> {
               //             BottomContainerLoading(height: size.maxHeight * 0.2));
               //   }),
               // ),
+<<<<<<< HEAD
                            BlocBuilder<AddressBloc, AddressState>(builder: (context, state) {
                 return state.map(
                     addressInitial: (i) => TopBar(address: ""),
@@ -87,6 +96,13 @@ class _ReceiveBeepState extends State<ReceiveBeep> {
                     addressFailure: (f) =>
                         TopBar(address: "Failed to get address"),
                     addressGotten: (g) => TopBar(address: g.address));
+=======
+              BlocBuilder<MapBloc, MapState>(builder: (context, state) {
+                return state.maybeMap(
+                    mapRendered: (r) => TopBar(address: "Getting Location..."),
+                    broadcastStarted: (b) => TopBar(address: b.mapTool.address),
+                    orElse: () => SizedBox());
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
               }),
             ],
           ),

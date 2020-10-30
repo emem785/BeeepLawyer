@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 
+<<<<<<< HEAD
 import 'package:beep_lawyer_3/core/error/failure.dart';
 import 'package:beep_lawyer_3/domain/Interface/local_storage_interface.dart';
 import 'package:beep_lawyer_3/domain/Interface/location_interface.dart';
@@ -10,6 +11,15 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:geocoder/geocoder.dart';
+=======
+import 'package:beep_lawyer2/core/error/failure.dart';
+import 'package:beep_lawyer2/domain/Interface/local_storage_interface.dart';
+import 'package:beep_lawyer2/domain/Interface/location_interface.dart';
+import 'package:beep_lawyer2/infrastructure/models/location.dart';
+import 'package:dartz/dartz.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
 import 'package:geolocator/geolocator.dart';
 import 'package:injectable/injectable.dart';
 
@@ -40,16 +50,25 @@ class UserLocationImpl implements UserLocationInterface {
   Future<Either<Failure, String>> getAddressFromLocation() async {
     try {
       final location = await getLocation();
+<<<<<<< HEAD
       final addresses = await Geocoder.local.findAddressesFromCoordinates(
           Coordinates(location.latitude, location.longitude));
       final address = addresses.first;
       return Right(address.addressLine);
+=======
+      final placemark = await geolocator.placemarkFromCoordinates(
+          location.latitude, location.longitude);
+      final address =
+          "${placemark[0].name},${placemark[0].locality},${placemark[0].administrativeArea}";
+      return Right(address);
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     } catch (e) {
       return Left(ServerFailure("Location not gotten"));
     }
   }
 
   @override
+<<<<<<< HEAD
   Future<Either<Failure, String>> getBuddyAddressFromLocation(
       Location location) async {
     try {
@@ -61,6 +80,14 @@ class UserLocationImpl implements UserLocationInterface {
       return Left(ServerFailure("Location not gotten"));
     }
     ;
+=======
+  Future<String> getBuddyAddressFromLocation(Location location) async {
+    final placemark = await geolocator.placemarkFromCoordinates(
+        location.latitude, location.longitude);
+    final address =
+        "${placemark[0].name},${placemark[0].locality},${placemark[0].administrativeArea}";
+    return address;
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
   }
 
   @override
@@ -85,6 +112,7 @@ class UserLocationImpl implements UserLocationInterface {
       print(data);
     }
   }
+<<<<<<< HEAD
 
   @override
   Future<double> getDistanceBetweenLocation(Location civilianLocation) async {
@@ -96,4 +124,6 @@ class UserLocationImpl implements UserLocationInterface {
         userLocation.longitude);
     return distance;
   }
+=======
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
 }

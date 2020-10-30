@@ -1,8 +1,14 @@
 import 'dart:convert';
 
+<<<<<<< HEAD
 import 'package:beep_lawyer_3/core/error/failure.dart';
 import 'package:beep_lawyer_3/domain/Interface/local_storage_interface.dart';
 import 'package:beep_lawyer_3/infrastructure/models/user.dart';
+=======
+import 'package:beep_lawyer2/core/error/failure.dart';
+import 'package:beep_lawyer2/domain/Interface/local_storage_interface.dart';
+import 'package:beep_lawyer2/infrastructure/models/user.dart';
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
 import 'package:dartz/dartz.dart';
 import 'package:injectable/injectable.dart';
 import 'package:shared_preferences/shared_preferences.dart';

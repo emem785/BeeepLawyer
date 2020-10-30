@@ -16,11 +16,14 @@ class _$AddressEventTearOff {
   GetAddress getAddress() {
     return const GetAddress();
   }
+<<<<<<< HEAD
 
 // ignore: unused_element
   GetBuddyAddress getBuddyAddress() {
     return const GetBuddyAddress();
   }
+=======
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
 }
 
 // ignore: unused_element
@@ -30,23 +33,35 @@ mixin _$AddressEvent {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result getAddress(),
+<<<<<<< HEAD
     @required Result getBuddyAddress(),
+=======
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
   });
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result getAddress(),
+<<<<<<< HEAD
     Result getBuddyAddress(),
+=======
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     @required Result orElse(),
   });
   @optionalTypeArgs
   Result map<Result extends Object>({
     @required Result getAddress(GetAddress value),
+<<<<<<< HEAD
     @required Result getBuddyAddress(GetBuddyAddress value),
+=======
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
   });
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result getAddress(GetAddress value),
+<<<<<<< HEAD
     Result getBuddyAddress(GetBuddyAddress value),
+=======
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     @required Result orElse(),
   });
 }
@@ -100,10 +115,15 @@ class _$GetAddress implements GetAddress {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result getAddress(),
+<<<<<<< HEAD
     @required Result getBuddyAddress(),
   }) {
     assert(getAddress != null);
     assert(getBuddyAddress != null);
+=======
+  }) {
+    assert(getAddress != null);
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     return getAddress();
   }
 
@@ -111,7 +131,10 @@ class _$GetAddress implements GetAddress {
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result getAddress(),
+<<<<<<< HEAD
     Result getBuddyAddress(),
+=======
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -125,10 +148,15 @@ class _$GetAddress implements GetAddress {
   @optionalTypeArgs
   Result map<Result extends Object>({
     @required Result getAddress(GetAddress value),
+<<<<<<< HEAD
     @required Result getBuddyAddress(GetBuddyAddress value),
   }) {
     assert(getAddress != null);
     assert(getBuddyAddress != null);
+=======
+  }) {
+    assert(getAddress != null);
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     return getAddress(this);
   }
 
@@ -136,7 +164,10 @@ class _$GetAddress implements GetAddress {
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result getAddress(GetAddress value),
+<<<<<<< HEAD
     Result getBuddyAddress(GetBuddyAddress value),
+=======
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -151,6 +182,7 @@ abstract class GetAddress implements AddressEvent {
   const factory GetAddress() = _$GetAddress;
 }
 
+<<<<<<< HEAD
 abstract class $GetBuddyAddressCopyWith<$Res> {
   factory $GetBuddyAddressCopyWith(
           GetBuddyAddress value, $Res Function(GetBuddyAddress) then) =
@@ -239,6 +271,8 @@ abstract class GetBuddyAddress implements AddressEvent {
   const factory GetBuddyAddress() = _$GetBuddyAddress;
 }
 
+=======
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
 class _$AddressStateTearOff {
   const _$AddressStateTearOff();
 

@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
+<<<<<<< HEAD
 import 'package:beep_lawyer_3/core/error/failure.dart';
 import 'package:beep_lawyer_3/domain/Interface/api_interface.dart';
 import 'package:beep_lawyer_3/domain/Interface/network_interface.dart';
@@ -11,6 +12,17 @@ import 'package:beep_lawyer_3/infrastructure/models/location.dart';
 import 'package:beep_lawyer_3/infrastructure/models/user.dart';
 import 'package:dartz/dartz.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
+=======
+import 'package:beep_lawyer2/core/error/failure.dart';
+import 'package:beep_lawyer2/domain/Interface/api_interface.dart';
+import 'package:beep_lawyer2/domain/Interface/network_interface.dart';
+import 'package:beep_lawyer2/domain/Interface/local_storage_interface.dart';
+import 'package:beep_lawyer2/infrastructure/models/buddy.dart';
+import 'package:beep_lawyer2/infrastructure/models/lawyers.dart';
+import 'package:beep_lawyer2/infrastructure/models/location.dart';
+import 'package:beep_lawyer2/infrastructure/models/user.dart';
+import 'package:dartz/dartz.dart';
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
 import 'package:flutter/material.dart';
 import 'package:injectable/injectable.dart';
 
@@ -37,7 +49,10 @@ class HttpApiImpl implements ApiInterface {
       "lastname": user.lastname,
       "email": user.email,
       "phone": user.phone,
+<<<<<<< HEAD
       "twitter_handle": user.twitterHandle,
+=======
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
       "password": password
     };
     final response =
@@ -106,10 +121,22 @@ class HttpApiImpl implements ApiInterface {
 
 //Location
   @override
+<<<<<<< HEAD
   Future<Either<Failure, bool>> startOnCall(String onCall) async {
     final body = {"on_call": onCall};
     final response =
         await client.postAuth(endpoint: "update_details", body: body);
+=======
+  Future<Either<Failure, bool>> beep(String action, Location position) async {
+    final body = {
+      "longitude": position.longitude.toString(),
+      "latitude": position.latitude.toString(),
+      "action": action,
+      "user_type": "civilian"
+    };
+    final response =
+        await client.postAuth(endpoint: "start_or_stop_beeep", body: body);
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     return response.fold((l) => Left(l), (r) => Right(true));
   }
 
@@ -119,7 +146,11 @@ class HttpApiImpl implements ApiInterface {
     final body = {
       "longitude": longitude.toString(),
       "latitude": latitude.toString(),
+<<<<<<< HEAD
       "user_type": "lawyer"
+=======
+      "user_type": "civilian"
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     };
     final response =
         await client.postAuth(endpoint: "add_location", body: body);
@@ -152,6 +183,7 @@ class HttpApiImpl implements ApiInterface {
       });
     }
   }
+<<<<<<< HEAD
 
   @override
   Future<Either<Failure, bool>> updateFirebaseKey(
@@ -164,4 +196,6 @@ class HttpApiImpl implements ApiInterface {
 
     return response.fold((l) => Left(l), (r) => Right(true));
   }
+=======
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
 }

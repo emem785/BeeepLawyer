@@ -9,7 +9,10 @@ abstract class Failure with _$Failure {
   const factory Failure.notAuthorized(String message) = NotAuthorized;
   const factory Failure.serverFailure(String message) = ServerFailure;
   const factory Failure.cacheFailure(String message) = CacheFailure;
+<<<<<<< HEAD
   const factory Failure.platformFailure(String message) = PlatformFailure;
+=======
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
 }
 
 

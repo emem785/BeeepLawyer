@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import 'package:beep_lawyer_3/infrastructure/models/location.dart';
 import 'package:beep_lawyer_3/infrastructure/models/map_tools.dart';
+=======
+import 'package:beep_lawyer2/infrastructure/models/location.dart';
+import 'package:beep_lawyer2/infrastructure/models/map_tools.dart';
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong/latlong.dart';

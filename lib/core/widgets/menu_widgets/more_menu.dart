@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import 'package:beep_lawyer_3/application/blocs/auth_bloc/auth_bloc.dart';
 import '../../../application/blocs/navigation_bloc/navigation_bloc.dart';
 import 'package:beep_lawyer_3/presentation/Screens/MenuPages/profile_pages/profiles_menu.dart';
@@ -5,6 +6,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:beep_lawyer_3/application/blocs/user_bloc/user_bloc.dart';
+=======
+import 'package:beep_lawyer2/application/blocs/auth_bloc/auth_bloc.dart';
+import '../../../application/blocs/navigation_bloc/navigation_bloc.dart';
+import 'package:beep_lawyer2/presentation/Screens/MenuPages/profile_pages/profiles_menu.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:beep_lawyer2/application/blocs/user_bloc/user_bloc.dart';
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
 
 import 'menu_item.dart';
 

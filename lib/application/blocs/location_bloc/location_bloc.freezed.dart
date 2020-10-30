@@ -13,10 +13,15 @@ class _$LocationEventTearOff {
   const _$LocationEventTearOff();
 
 // ignore: unused_element
+<<<<<<< HEAD
   RenderMap renderMap(FirebaseMessaging firebaseMessaging) {
     return RenderMap(
       firebaseMessaging,
     );
+=======
+  RenderMap renderMap() {
+    return const RenderMap();
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
   }
 
 // ignore: unused_element
@@ -41,14 +46,22 @@ const $LocationEvent = _$LocationEventTearOff();
 mixin _$LocationEvent {
   @optionalTypeArgs
   Result when<Result extends Object>({
+<<<<<<< HEAD
     @required Result renderMap(FirebaseMessaging firebaseMessaging),
+=======
+    @required Result renderMap(),
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     @required Result startOnCallSession(),
     @required Result stopOnCallSession(),
     @required Result resumeOnCallSession(),
   });
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
+<<<<<<< HEAD
     Result renderMap(FirebaseMessaging firebaseMessaging),
+=======
+    Result renderMap(),
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     Result startOnCallSession(),
     Result stopOnCallSession(),
     Result resumeOnCallSession(),
@@ -89,7 +102,10 @@ class _$LocationEventCopyWithImpl<$Res>
 abstract class $RenderMapCopyWith<$Res> {
   factory $RenderMapCopyWith(RenderMap value, $Res Function(RenderMap) then) =
       _$RenderMapCopyWithImpl<$Res>;
+<<<<<<< HEAD
   $Res call({FirebaseMessaging firebaseMessaging});
+=======
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
 }
 
 class _$RenderMapCopyWithImpl<$Res> extends _$LocationEventCopyWithImpl<$Res>
@@ -99,6 +115,7 @@ class _$RenderMapCopyWithImpl<$Res> extends _$LocationEventCopyWithImpl<$Res>
 
   @override
   RenderMap get _value => super._value as RenderMap;
+<<<<<<< HEAD
 
   @override
   $Res call({
@@ -121,18 +138,33 @@ class _$RenderMap with DiagnosticableTreeMixin implements RenderMap {
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'LocationEvent.renderMap(firebaseMessaging: $firebaseMessaging)';
+=======
+}
+
+class _$RenderMap with DiagnosticableTreeMixin implements RenderMap {
+  const _$RenderMap();
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'LocationEvent.renderMap()';
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
+<<<<<<< HEAD
     properties
       ..add(DiagnosticsProperty('type', 'LocationEvent.renderMap'))
       ..add(DiagnosticsProperty('firebaseMessaging', firebaseMessaging));
+=======
+    properties..add(DiagnosticsProperty('type', 'LocationEvent.renderMap'));
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
   }
 
   @override
   bool operator ==(dynamic other) {
+<<<<<<< HEAD
     return identical(this, other) ||
         (other is RenderMap &&
             (identical(other.firebaseMessaging, firebaseMessaging) ||
@@ -148,11 +180,22 @@ class _$RenderMap with DiagnosticableTreeMixin implements RenderMap {
   @override
   $RenderMapCopyWith<RenderMap> get copyWith =>
       _$RenderMapCopyWithImpl<RenderMap>(this, _$identity);
+=======
+    return identical(this, other) || (other is RenderMap);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
 
   @override
   @optionalTypeArgs
   Result when<Result extends Object>({
+<<<<<<< HEAD
     @required Result renderMap(FirebaseMessaging firebaseMessaging),
+=======
+    @required Result renderMap(),
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     @required Result startOnCallSession(),
     @required Result stopOnCallSession(),
     @required Result resumeOnCallSession(),
@@ -161,13 +204,21 @@ class _$RenderMap with DiagnosticableTreeMixin implements RenderMap {
     assert(startOnCallSession != null);
     assert(stopOnCallSession != null);
     assert(resumeOnCallSession != null);
+<<<<<<< HEAD
     return renderMap(firebaseMessaging);
+=======
+    return renderMap();
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
   }
 
   @override
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
+<<<<<<< HEAD
     Result renderMap(FirebaseMessaging firebaseMessaging),
+=======
+    Result renderMap(),
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     Result startOnCallSession(),
     Result stopOnCallSession(),
     Result resumeOnCallSession(),
@@ -175,7 +226,11 @@ class _$RenderMap with DiagnosticableTreeMixin implements RenderMap {
   }) {
     assert(orElse != null);
     if (renderMap != null) {
+<<<<<<< HEAD
       return renderMap(firebaseMessaging);
+=======
+      return renderMap();
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     }
     return orElse();
   }
@@ -213,10 +268,14 @@ class _$RenderMap with DiagnosticableTreeMixin implements RenderMap {
 }
 
 abstract class RenderMap implements LocationEvent {
+<<<<<<< HEAD
   const factory RenderMap(FirebaseMessaging firebaseMessaging) = _$RenderMap;
 
   FirebaseMessaging get firebaseMessaging;
   $RenderMapCopyWith<RenderMap> get copyWith;
+=======
+  const factory RenderMap() = _$RenderMap;
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
 }
 
 abstract class $StartOnCallSessionCopyWith<$Res> {
@@ -264,7 +323,11 @@ class _$StartOnCallSession
   @override
   @optionalTypeArgs
   Result when<Result extends Object>({
+<<<<<<< HEAD
     @required Result renderMap(FirebaseMessaging firebaseMessaging),
+=======
+    @required Result renderMap(),
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     @required Result startOnCallSession(),
     @required Result stopOnCallSession(),
     @required Result resumeOnCallSession(),
@@ -279,7 +342,11 @@ class _$StartOnCallSession
   @override
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
+<<<<<<< HEAD
     Result renderMap(FirebaseMessaging firebaseMessaging),
+=======
+    Result renderMap(),
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     Result startOnCallSession(),
     Result stopOnCallSession(),
     Result resumeOnCallSession(),
@@ -373,7 +440,11 @@ class _$StopOnCallSession
   @override
   @optionalTypeArgs
   Result when<Result extends Object>({
+<<<<<<< HEAD
     @required Result renderMap(FirebaseMessaging firebaseMessaging),
+=======
+    @required Result renderMap(),
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     @required Result startOnCallSession(),
     @required Result stopOnCallSession(),
     @required Result resumeOnCallSession(),
@@ -388,7 +459,11 @@ class _$StopOnCallSession
   @override
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
+<<<<<<< HEAD
     Result renderMap(FirebaseMessaging firebaseMessaging),
+=======
+    Result renderMap(),
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     Result startOnCallSession(),
     Result stopOnCallSession(),
     Result resumeOnCallSession(),
@@ -482,7 +557,11 @@ class _$ResumeOnCallSession
   @override
   @optionalTypeArgs
   Result when<Result extends Object>({
+<<<<<<< HEAD
     @required Result renderMap(FirebaseMessaging firebaseMessaging),
+=======
+    @required Result renderMap(),
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     @required Result startOnCallSession(),
     @required Result stopOnCallSession(),
     @required Result resumeOnCallSession(),
@@ -497,7 +576,11 @@ class _$ResumeOnCallSession
   @override
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
+<<<<<<< HEAD
     Result renderMap(FirebaseMessaging firebaseMessaging),
+=======
+    Result renderMap(),
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     Result startOnCallSession(),
     Result stopOnCallSession(),
     Result resumeOnCallSession(),

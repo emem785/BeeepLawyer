@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import 'package:beep_lawyer_3/core/utils/StyleGuide.dart';
 import 'package:beep_lawyer_3/core/widgets/common_widgets/common_button.dart';
 import 'package:beep_lawyer_3/core/widgets/common_widgets/spinner.dart';
@@ -5,6 +6,15 @@ import 'package:beep_lawyer_3/infrastructure/models/user.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:beep_lawyer_3/application/blocs/user_bloc/user_bloc.dart';
+=======
+import 'package:beep_lawyer2/core/utils/StyleGuide.dart';
+import 'package:beep_lawyer2/core/widgets/common_widgets/common_button.dart';
+import 'package:beep_lawyer2/core/widgets/common_widgets/spinner.dart';
+import 'package:beep_lawyer2/infrastructure/models/user.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:beep_lawyer2/application/blocs/user_bloc/user_bloc.dart';
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
 import '../../../../application/blocs/navigation_bloc/navigation_bloc.dart';
 
 class ProfileMenu extends StatefulWidget {
@@ -161,6 +171,7 @@ class CusTextFine extends StatelessWidget {
             children: <Widget>[
               Stack(
                 children: <Widget>[
+<<<<<<< HEAD
                   Align(
                     child: Row(
                       children: [
@@ -176,6 +187,19 @@ class CusTextFine extends StatelessWidget {
                       ],
                     ),
                     alignment: Alignment.topRight,
+=======
+                  Positioned(
+                    child: Text(
+                      'Edit',
+                      style: TextStyle(
+                          fontSize: 12,
+                          fontFamily: 'Nunito',
+                          fontWeight: FontWeight.w600,
+                          color: Colors.green[900]),
+                    ),
+                    left: 290,
+                    top: 14,
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
                   ),
                   TextFormField(
                     decoration: InputDecoration(

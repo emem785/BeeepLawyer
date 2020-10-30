@@ -33,12 +33,19 @@ android {
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
+<<<<<<< HEAD
         applicationId "com.example.beep_lawyer_3"
+=======
+        applicationId "com.example.beep_lawyer2"
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
         minSdkVersion 16
         targetSdkVersion 28
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
+<<<<<<< HEAD
         multiDexEnabled true
+=======
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     }
 
     buildTypes {
@@ -55,11 +62,16 @@ flutter {
 }
 
 dependencies {
+<<<<<<< HEAD
     implementation "androidx.work:work-runtime:2.3.4"
+=======
+    implementation "androidx.work:work-runtime:2.3.4";
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     implementation 'com.squareup.retrofit2:retrofit:2.5.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
     implementation 'com.google.android.gms:play-services-location:17.0.0'
     implementation 'com.squareup.okhttp3:logging-interceptor:3.12.1'
+<<<<<<< HEAD
     implementation 'com.google.firebase:firebase-messaging:20.2.4'
     implementation 'com.google.guava:guava:27.0.1-android'
     implementation 'com.android.support:multidex:1.0.3'
@@ -68,3 +80,6 @@ dependencies {
 
 apply plugin: 'com.google.gms.google-services'
 
+=======
+}
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f

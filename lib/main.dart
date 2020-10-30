@@ -1,13 +1,24 @@
+<<<<<<< HEAD
 import 'package:beep_lawyer_3/core/utils/StyleGuide.dart';
 import 'package:beep_lawyer_3/injectable.dart';
 import 'package:beep_lawyer_3/application/blocs/auth_bloc/auth_bloc.dart';
+=======
+import 'package:beep_lawyer2/core/utils/StyleGuide.dart';
+import 'package:beep_lawyer2/injectable.dart';
+import 'package:beep_lawyer2/application/blocs/auth_bloc/auth_bloc.dart';
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
 import 'package:flutter/material.dart';
 import 'package:injectable/injectable.dart';
 
 import 'core/utils/route_generator.dart';
 
+<<<<<<< HEAD
 import 'package:beep_lawyer_3/application/blocs/sign_in_bloc/signin_bloc.dart';
 import 'package:beep_lawyer_3/application/blocs/register_bloc/register_bloc.dart';
+=======
+import 'package:beep_lawyer2/application/blocs/sign_in_bloc/signin_bloc.dart';
+import 'package:beep_lawyer2/application/blocs/register_bloc/register_bloc.dart';
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
 import 'application/blocs/user_bloc/user_bloc.dart';
 import 'application/blocs/navigation_bloc/navigation_bloc.dart';
 

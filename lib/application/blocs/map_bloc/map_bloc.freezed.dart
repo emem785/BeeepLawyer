@@ -13,10 +13,15 @@ class _$MapEventTearOff {
   const _$MapEventTearOff();
 
 // ignore: unused_element
+<<<<<<< HEAD
   RenderBuddyMap renderClientMap(Buddy buddy) {
     return RenderBuddyMap(
       buddy,
     );
+=======
+  RenderBuddyMap renderBuddyMap() {
+    return const RenderBuddyMap();
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
   }
 
 // ignore: unused_element
@@ -39,26 +44,42 @@ const $MapEvent = _$MapEventTearOff();
 mixin _$MapEvent {
   @optionalTypeArgs
   Result when<Result extends Object>({
+<<<<<<< HEAD
     @required Result renderClientMap(Buddy buddy),
+=======
+    @required Result renderBuddyMap(),
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     @required Result startBroadcast(MapTool mapTool, Buddy buddy),
     @required Result stopSecondBroadcast(),
   });
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
+<<<<<<< HEAD
     Result renderClientMap(Buddy buddy),
+=======
+    Result renderBuddyMap(),
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     Result startBroadcast(MapTool mapTool, Buddy buddy),
     Result stopSecondBroadcast(),
     @required Result orElse(),
   });
   @optionalTypeArgs
   Result map<Result extends Object>({
+<<<<<<< HEAD
     @required Result renderClientMap(RenderBuddyMap value),
+=======
+    @required Result renderBuddyMap(RenderBuddyMap value),
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     @required Result startBroadcast(StartBroadcast value),
     @required Result stopSecondBroadcast(StopSecondBroadcast value),
   });
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
+<<<<<<< HEAD
     Result renderClientMap(RenderBuddyMap value),
+=======
+    Result renderBuddyMap(RenderBuddyMap value),
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     Result startBroadcast(StartBroadcast value),
     Result stopSecondBroadcast(StopSecondBroadcast value),
     @required Result orElse(),
@@ -82,7 +103,10 @@ abstract class $RenderBuddyMapCopyWith<$Res> {
   factory $RenderBuddyMapCopyWith(
           RenderBuddyMap value, $Res Function(RenderBuddyMap) then) =
       _$RenderBuddyMapCopyWithImpl<$Res>;
+<<<<<<< HEAD
   $Res call({Buddy buddy});
+=======
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
 }
 
 class _$RenderBuddyMapCopyWithImpl<$Res> extends _$MapEventCopyWithImpl<$Res>
@@ -93,6 +117,7 @@ class _$RenderBuddyMapCopyWithImpl<$Res> extends _$MapEventCopyWithImpl<$Res>
 
   @override
   RenderBuddyMap get _value => super._value as RenderBuddyMap;
+<<<<<<< HEAD
 
   @override
   $Res call({
@@ -113,10 +138,21 @@ class _$RenderBuddyMap implements RenderBuddyMap {
   @override
   String toString() {
     return 'MapEvent.renderClientMap(buddy: $buddy)';
+=======
+}
+
+class _$RenderBuddyMap implements RenderBuddyMap {
+  const _$RenderBuddyMap();
+
+  @override
+  String toString() {
+    return 'MapEvent.renderBuddyMap()';
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
   }
 
   @override
   bool operator ==(dynamic other) {
+<<<<<<< HEAD
     return identical(this, other) ||
         (other is RenderBuddyMap &&
             (identical(other.buddy, buddy) ||
@@ -130,10 +166,18 @@ class _$RenderBuddyMap implements RenderBuddyMap {
   @override
   $RenderBuddyMapCopyWith<RenderBuddyMap> get copyWith =>
       _$RenderBuddyMapCopyWithImpl<RenderBuddyMap>(this, _$identity);
+=======
+    return identical(this, other) || (other is RenderBuddyMap);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
 
   @override
   @optionalTypeArgs
   Result when<Result extends Object>({
+<<<<<<< HEAD
     @required Result renderClientMap(Buddy buddy),
     @required Result startBroadcast(MapTool mapTool, Buddy buddy),
     @required Result stopSecondBroadcast(),
@@ -142,19 +186,38 @@ class _$RenderBuddyMap implements RenderBuddyMap {
     assert(startBroadcast != null);
     assert(stopSecondBroadcast != null);
     return renderClientMap(buddy);
+=======
+    @required Result renderBuddyMap(),
+    @required Result startBroadcast(MapTool mapTool, Buddy buddy),
+    @required Result stopSecondBroadcast(),
+  }) {
+    assert(renderBuddyMap != null);
+    assert(startBroadcast != null);
+    assert(stopSecondBroadcast != null);
+    return renderBuddyMap();
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
   }
 
   @override
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
+<<<<<<< HEAD
     Result renderClientMap(Buddy buddy),
+=======
+    Result renderBuddyMap(),
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     Result startBroadcast(MapTool mapTool, Buddy buddy),
     Result stopSecondBroadcast(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
+<<<<<<< HEAD
     if (renderClientMap != null) {
       return renderClientMap(buddy);
+=======
+    if (renderBuddyMap != null) {
+      return renderBuddyMap();
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     }
     return orElse();
   }
@@ -162,6 +225,7 @@ class _$RenderBuddyMap implements RenderBuddyMap {
   @override
   @optionalTypeArgs
   Result map<Result extends Object>({
+<<<<<<< HEAD
     @required Result renderClientMap(RenderBuddyMap value),
     @required Result startBroadcast(StartBroadcast value),
     @required Result stopSecondBroadcast(StopSecondBroadcast value),
@@ -170,29 +234,52 @@ class _$RenderBuddyMap implements RenderBuddyMap {
     assert(startBroadcast != null);
     assert(stopSecondBroadcast != null);
     return renderClientMap(this);
+=======
+    @required Result renderBuddyMap(RenderBuddyMap value),
+    @required Result startBroadcast(StartBroadcast value),
+    @required Result stopSecondBroadcast(StopSecondBroadcast value),
+  }) {
+    assert(renderBuddyMap != null);
+    assert(startBroadcast != null);
+    assert(stopSecondBroadcast != null);
+    return renderBuddyMap(this);
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
   }
 
   @override
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
+<<<<<<< HEAD
     Result renderClientMap(RenderBuddyMap value),
+=======
+    Result renderBuddyMap(RenderBuddyMap value),
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     Result startBroadcast(StartBroadcast value),
     Result stopSecondBroadcast(StopSecondBroadcast value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
+<<<<<<< HEAD
     if (renderClientMap != null) {
       return renderClientMap(this);
+=======
+    if (renderBuddyMap != null) {
+      return renderBuddyMap(this);
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     }
     return orElse();
   }
 }
 
 abstract class RenderBuddyMap implements MapEvent {
+<<<<<<< HEAD
   const factory RenderBuddyMap(Buddy buddy) = _$RenderBuddyMap;
 
   Buddy get buddy;
   $RenderBuddyMapCopyWith<RenderBuddyMap> get copyWith;
+=======
+  const factory RenderBuddyMap() = _$RenderBuddyMap;
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
 }
 
 abstract class $StartBroadcastCopyWith<$Res> {
@@ -262,11 +349,19 @@ class _$StartBroadcast implements StartBroadcast {
   @override
   @optionalTypeArgs
   Result when<Result extends Object>({
+<<<<<<< HEAD
     @required Result renderClientMap(Buddy buddy),
     @required Result startBroadcast(MapTool mapTool, Buddy buddy),
     @required Result stopSecondBroadcast(),
   }) {
     assert(renderClientMap != null);
+=======
+    @required Result renderBuddyMap(),
+    @required Result startBroadcast(MapTool mapTool, Buddy buddy),
+    @required Result stopSecondBroadcast(),
+  }) {
+    assert(renderBuddyMap != null);
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     assert(startBroadcast != null);
     assert(stopSecondBroadcast != null);
     return startBroadcast(mapTool, buddy);
@@ -275,7 +370,11 @@ class _$StartBroadcast implements StartBroadcast {
   @override
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
+<<<<<<< HEAD
     Result renderClientMap(Buddy buddy),
+=======
+    Result renderBuddyMap(),
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     Result startBroadcast(MapTool mapTool, Buddy buddy),
     Result stopSecondBroadcast(),
     @required Result orElse(),
@@ -290,11 +389,19 @@ class _$StartBroadcast implements StartBroadcast {
   @override
   @optionalTypeArgs
   Result map<Result extends Object>({
+<<<<<<< HEAD
     @required Result renderClientMap(RenderBuddyMap value),
     @required Result startBroadcast(StartBroadcast value),
     @required Result stopSecondBroadcast(StopSecondBroadcast value),
   }) {
     assert(renderClientMap != null);
+=======
+    @required Result renderBuddyMap(RenderBuddyMap value),
+    @required Result startBroadcast(StartBroadcast value),
+    @required Result stopSecondBroadcast(StopSecondBroadcast value),
+  }) {
+    assert(renderBuddyMap != null);
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     assert(startBroadcast != null);
     assert(stopSecondBroadcast != null);
     return startBroadcast(this);
@@ -303,7 +410,11 @@ class _$StartBroadcast implements StartBroadcast {
   @override
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
+<<<<<<< HEAD
     Result renderClientMap(RenderBuddyMap value),
+=======
+    Result renderBuddyMap(RenderBuddyMap value),
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     Result startBroadcast(StartBroadcast value),
     Result stopSecondBroadcast(StopSecondBroadcast value),
     @required Result orElse(),
@@ -360,11 +471,19 @@ class _$StopSecondBroadcast implements StopSecondBroadcast {
   @override
   @optionalTypeArgs
   Result when<Result extends Object>({
+<<<<<<< HEAD
     @required Result renderClientMap(Buddy buddy),
     @required Result startBroadcast(MapTool mapTool, Buddy buddy),
     @required Result stopSecondBroadcast(),
   }) {
     assert(renderClientMap != null);
+=======
+    @required Result renderBuddyMap(),
+    @required Result startBroadcast(MapTool mapTool, Buddy buddy),
+    @required Result stopSecondBroadcast(),
+  }) {
+    assert(renderBuddyMap != null);
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     assert(startBroadcast != null);
     assert(stopSecondBroadcast != null);
     return stopSecondBroadcast();
@@ -373,7 +492,11 @@ class _$StopSecondBroadcast implements StopSecondBroadcast {
   @override
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
+<<<<<<< HEAD
     Result renderClientMap(Buddy buddy),
+=======
+    Result renderBuddyMap(),
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     Result startBroadcast(MapTool mapTool, Buddy buddy),
     Result stopSecondBroadcast(),
     @required Result orElse(),
@@ -388,11 +511,19 @@ class _$StopSecondBroadcast implements StopSecondBroadcast {
   @override
   @optionalTypeArgs
   Result map<Result extends Object>({
+<<<<<<< HEAD
     @required Result renderClientMap(RenderBuddyMap value),
     @required Result startBroadcast(StartBroadcast value),
     @required Result stopSecondBroadcast(StopSecondBroadcast value),
   }) {
     assert(renderClientMap != null);
+=======
+    @required Result renderBuddyMap(RenderBuddyMap value),
+    @required Result startBroadcast(StartBroadcast value),
+    @required Result stopSecondBroadcast(StopSecondBroadcast value),
+  }) {
+    assert(renderBuddyMap != null);
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     assert(startBroadcast != null);
     assert(stopSecondBroadcast != null);
     return stopSecondBroadcast(this);
@@ -401,7 +532,11 @@ class _$StopSecondBroadcast implements StopSecondBroadcast {
   @override
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
+<<<<<<< HEAD
     Result renderClientMap(RenderBuddyMap value),
+=======
+    Result renderBuddyMap(RenderBuddyMap value),
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     Result startBroadcast(StartBroadcast value),
     Result stopSecondBroadcast(StopSecondBroadcast value),
     @required Result orElse(),
@@ -427,9 +562,16 @@ class _$MapStateTearOff {
   }
 
 // ignore: unused_element
+<<<<<<< HEAD
   MapRendered mapRendered(MapTool mapTool) {
     return MapRendered(
       mapTool,
+=======
+  MapRendered mapRendered(MapTool mapTool, Buddy buddy) {
+    return MapRendered(
+      mapTool,
+      buddy,
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     );
   }
 
@@ -464,7 +606,11 @@ mixin _$MapState {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result initial(),
+<<<<<<< HEAD
     @required Result mapRendered(MapTool mapTool),
+=======
+    @required Result mapRendered(MapTool mapTool, Buddy buddy),
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     @required Result broadcastStarted(Buddy buddy, MapTool mapTool),
     @required Result broadcastEnded(),
     @required Result broadcastError(),
@@ -473,7 +619,11 @@ mixin _$MapState {
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result initial(),
+<<<<<<< HEAD
     Result mapRendered(MapTool mapTool),
+=======
+    Result mapRendered(MapTool mapTool, Buddy buddy),
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     Result broadcastStarted(Buddy buddy, MapTool mapTool),
     Result broadcastEnded(),
     Result broadcastError(),
@@ -549,7 +699,11 @@ class _$MapInitial implements MapInitial {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result initial(),
+<<<<<<< HEAD
     @required Result mapRendered(MapTool mapTool),
+=======
+    @required Result mapRendered(MapTool mapTool, Buddy buddy),
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     @required Result broadcastStarted(Buddy buddy, MapTool mapTool),
     @required Result broadcastEnded(),
     @required Result broadcastError(),
@@ -568,7 +722,11 @@ class _$MapInitial implements MapInitial {
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result initial(),
+<<<<<<< HEAD
     Result mapRendered(MapTool mapTool),
+=======
+    Result mapRendered(MapTool mapTool, Buddy buddy),
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     Result broadcastStarted(Buddy buddy, MapTool mapTool),
     Result broadcastEnded(),
     Result broadcastError(),
@@ -628,7 +786,11 @@ abstract class $MapRenderedCopyWith<$Res> {
   factory $MapRenderedCopyWith(
           MapRendered value, $Res Function(MapRendered) then) =
       _$MapRenderedCopyWithImpl<$Res>;
+<<<<<<< HEAD
   $Res call({MapTool mapTool});
+=======
+  $Res call({MapTool mapTool, Buddy buddy});
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
 }
 
 class _$MapRenderedCopyWithImpl<$Res> extends _$MapStateCopyWithImpl<$Res>
@@ -643,14 +805,23 @@ class _$MapRenderedCopyWithImpl<$Res> extends _$MapStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object mapTool = freezed,
+<<<<<<< HEAD
   }) {
     return _then(MapRendered(
       mapTool == freezed ? _value.mapTool : mapTool as MapTool,
+=======
+    Object buddy = freezed,
+  }) {
+    return _then(MapRendered(
+      mapTool == freezed ? _value.mapTool : mapTool as MapTool,
+      buddy == freezed ? _value.buddy : buddy as Buddy,
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     ));
   }
 }
 
 class _$MapRendered implements MapRendered {
+<<<<<<< HEAD
   const _$MapRendered(this.mapTool) : assert(mapTool != null);
 
   @override
@@ -659,6 +830,20 @@ class _$MapRendered implements MapRendered {
   @override
   String toString() {
     return 'MapState.mapRendered(mapTool: $mapTool)';
+=======
+  const _$MapRendered(this.mapTool, this.buddy)
+      : assert(mapTool != null),
+        assert(buddy != null);
+
+  @override
+  final MapTool mapTool;
+  @override
+  final Buddy buddy;
+
+  @override
+  String toString() {
+    return 'MapState.mapRendered(mapTool: $mapTool, buddy: $buddy)';
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
   }
 
   @override
@@ -666,12 +851,25 @@ class _$MapRendered implements MapRendered {
     return identical(this, other) ||
         (other is MapRendered &&
             (identical(other.mapTool, mapTool) ||
+<<<<<<< HEAD
                 const DeepCollectionEquality().equals(other.mapTool, mapTool)));
+=======
+                const DeepCollectionEquality()
+                    .equals(other.mapTool, mapTool)) &&
+            (identical(other.buddy, buddy) ||
+                const DeepCollectionEquality().equals(other.buddy, buddy)));
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
   }
 
   @override
   int get hashCode =>
+<<<<<<< HEAD
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(mapTool);
+=======
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(mapTool) ^
+      const DeepCollectionEquality().hash(buddy);
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
 
   @override
   $MapRenderedCopyWith<MapRendered> get copyWith =>
@@ -681,7 +879,11 @@ class _$MapRendered implements MapRendered {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result initial(),
+<<<<<<< HEAD
     @required Result mapRendered(MapTool mapTool),
+=======
+    @required Result mapRendered(MapTool mapTool, Buddy buddy),
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     @required Result broadcastStarted(Buddy buddy, MapTool mapTool),
     @required Result broadcastEnded(),
     @required Result broadcastError(),
@@ -693,14 +895,22 @@ class _$MapRendered implements MapRendered {
     assert(broadcastEnded != null);
     assert(broadcastError != null);
     assert(loading != null);
+<<<<<<< HEAD
     return mapRendered(mapTool);
+=======
+    return mapRendered(mapTool, buddy);
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
   }
 
   @override
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result initial(),
+<<<<<<< HEAD
     Result mapRendered(MapTool mapTool),
+=======
+    Result mapRendered(MapTool mapTool, Buddy buddy),
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     Result broadcastStarted(Buddy buddy, MapTool mapTool),
     Result broadcastEnded(),
     Result broadcastError(),
@@ -709,7 +919,11 @@ class _$MapRendered implements MapRendered {
   }) {
     assert(orElse != null);
     if (mapRendered != null) {
+<<<<<<< HEAD
       return mapRendered(mapTool);
+=======
+      return mapRendered(mapTool, buddy);
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     }
     return orElse();
   }
@@ -753,9 +967,16 @@ class _$MapRendered implements MapRendered {
 }
 
 abstract class MapRendered implements MapState {
+<<<<<<< HEAD
   const factory MapRendered(MapTool mapTool) = _$MapRendered;
 
   MapTool get mapTool;
+=======
+  const factory MapRendered(MapTool mapTool, Buddy buddy) = _$MapRendered;
+
+  MapTool get mapTool;
+  Buddy get buddy;
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
   $MapRenderedCopyWith<MapRendered> get copyWith;
 }
 
@@ -826,7 +1047,11 @@ class _$BroadcastStarted implements BroadcastStarted {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result initial(),
+<<<<<<< HEAD
     @required Result mapRendered(MapTool mapTool),
+=======
+    @required Result mapRendered(MapTool mapTool, Buddy buddy),
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     @required Result broadcastStarted(Buddy buddy, MapTool mapTool),
     @required Result broadcastEnded(),
     @required Result broadcastError(),
@@ -845,7 +1070,11 @@ class _$BroadcastStarted implements BroadcastStarted {
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result initial(),
+<<<<<<< HEAD
     Result mapRendered(MapTool mapTool),
+=======
+    Result mapRendered(MapTool mapTool, Buddy buddy),
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     Result broadcastStarted(Buddy buddy, MapTool mapTool),
     Result broadcastEnded(),
     Result broadcastError(),
@@ -942,7 +1171,11 @@ class _$BroadcastEnded implements BroadcastEnded {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result initial(),
+<<<<<<< HEAD
     @required Result mapRendered(MapTool mapTool),
+=======
+    @required Result mapRendered(MapTool mapTool, Buddy buddy),
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     @required Result broadcastStarted(Buddy buddy, MapTool mapTool),
     @required Result broadcastEnded(),
     @required Result broadcastError(),
@@ -961,7 +1194,11 @@ class _$BroadcastEnded implements BroadcastEnded {
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result initial(),
+<<<<<<< HEAD
     Result mapRendered(MapTool mapTool),
+=======
+    Result mapRendered(MapTool mapTool, Buddy buddy),
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     Result broadcastStarted(Buddy buddy, MapTool mapTool),
     Result broadcastEnded(),
     Result broadcastError(),
@@ -1053,7 +1290,11 @@ class _$BroadcastError implements BroadcastError {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result initial(),
+<<<<<<< HEAD
     @required Result mapRendered(MapTool mapTool),
+=======
+    @required Result mapRendered(MapTool mapTool, Buddy buddy),
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     @required Result broadcastStarted(Buddy buddy, MapTool mapTool),
     @required Result broadcastEnded(),
     @required Result broadcastError(),
@@ -1072,7 +1313,11 @@ class _$BroadcastError implements BroadcastError {
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result initial(),
+<<<<<<< HEAD
     Result mapRendered(MapTool mapTool),
+=======
+    Result mapRendered(MapTool mapTool, Buddy buddy),
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     Result broadcastStarted(Buddy buddy, MapTool mapTool),
     Result broadcastEnded(),
     Result broadcastError(),
@@ -1163,7 +1408,11 @@ class _$MapLoading implements MapLoading {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result initial(),
+<<<<<<< HEAD
     @required Result mapRendered(MapTool mapTool),
+=======
+    @required Result mapRendered(MapTool mapTool, Buddy buddy),
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     @required Result broadcastStarted(Buddy buddy, MapTool mapTool),
     @required Result broadcastEnded(),
     @required Result broadcastError(),
@@ -1182,7 +1431,11 @@ class _$MapLoading implements MapLoading {
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result initial(),
+<<<<<<< HEAD
     Result mapRendered(MapTool mapTool),
+=======
+    Result mapRendered(MapTool mapTool, Buddy buddy),
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
     Result broadcastStarted(Buddy buddy, MapTool mapTool),
     Result broadcastEnded(),
     Result broadcastError(),

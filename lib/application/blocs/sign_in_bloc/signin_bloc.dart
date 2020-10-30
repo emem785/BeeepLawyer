@@ -1,13 +1,22 @@
 import 'dart:async';
 
 
+<<<<<<< HEAD
 import 'package:beep_lawyer_3/domain/Interface/api_interface.dart';
 import 'package:beep_lawyer_3/domain/Interface/local_storage_interface.dart';
+=======
+import 'package:beep_lawyer2/domain/Interface/api_interface.dart';
+import 'package:beep_lawyer2/domain/Interface/local_storage_interface.dart';
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
 import 'package:bloc/bloc.dart';
 import 'package:injectable/injectable.dart';
 import 'package:meta/meta.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+<<<<<<< HEAD
 import 'package:beep_lawyer_3/core/error/failure.dart';
+=======
+import 'package:beep_lawyer2/core/error/failure.dart';
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
 
 part 'signin_event.dart';
 part 'signin_state.dart';

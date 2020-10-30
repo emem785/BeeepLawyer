@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 import 'package:beep_lawyer_3/core/utils/StyleGuide.dart';
 import 'package:beep_lawyer_3/core/widgets/common_widgets/common_button.dart';
 import 'package:beep_lawyer_3/core/widgets/common_widgets/custom_text_form_field.dart';
+=======
+import 'package:beep_lawyer2/core/utils/StyleGuide.dart';
+import 'package:beep_lawyer2/core/widgets/common_widgets/common_button.dart';
+import 'package:beep_lawyer2/core/widgets/common_widgets/custom_text_form_field.dart';
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
 import 'package:flutter/material.dart';
 
 class ForgotPassword extends StatefulWidget {

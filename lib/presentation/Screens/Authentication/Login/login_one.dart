@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import 'package:beep_lawyer_3/core/utils/StyleGuide.dart';
 import 'package:beep_lawyer_3/core/widgets/common_widgets/common_button.dart';
 import 'package:beep_lawyer_3/core/widgets/common_widgets/custom_text_form_field.dart';
@@ -5,6 +6,15 @@ import 'package:beep_lawyer_3/core/widgets/common_widgets/spinner.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:beep_lawyer_3/application/blocs/sign_in_bloc/signin_bloc.dart';
+=======
+import 'package:beep_lawyer2/core/utils/StyleGuide.dart';
+import 'package:beep_lawyer2/core/widgets/common_widgets/common_button.dart';
+import 'package:beep_lawyer2/core/widgets/common_widgets/custom_text_form_field.dart';
+import 'package:beep_lawyer2/core/widgets/common_widgets/spinner.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:beep_lawyer2/application/blocs/sign_in_bloc/signin_bloc.dart';
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
 
 class LoginOne extends StatefulWidget {
   @override

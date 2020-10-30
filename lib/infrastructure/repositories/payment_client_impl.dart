@@ -1,7 +1,12 @@
 import 'dart:io';
 
+<<<<<<< HEAD
 import 'package:beep_lawyer_3/core/error/failure.dart';
 import 'package:beep_lawyer_3/domain/Interface/payment_interface.dart';
+=======
+import 'package:beep_lawyer2/core/error/failure.dart';
+import 'package:beep_lawyer2/domain/Interface/payment_interface.dart';
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
 import 'package:flutter/material.dart';
 import 'package:flutter_paystack/flutter_paystack.dart';
 import 'package:dartz/dartz.dart';

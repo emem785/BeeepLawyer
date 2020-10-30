@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import 'package:beep_lawyer_3/core/utils/StyleGuide.dart';
+=======
+import 'package:beep_lawyer2/core/utils/StyleGuide.dart';
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
 import 'package:flutter/material.dart';
 
 class TopBar extends StatelessWidget {
@@ -15,7 +19,11 @@ class TopBar extends StatelessWidget {
       child: Align(
         alignment: Alignment.topCenter,
         child: Container(
+<<<<<<< HEAD
           width: MediaQuery.of(context).size.width * 0.95,
+=======
+          width: 385,
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
           height: 60,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(5),

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # beep_lawyer_3
+=======
+# beep_lawyer2
+>>>>>>> 143f1349d2ce14b4f679f67a0d62329d3e38bb8f
 
 A new Flutter project.
 
